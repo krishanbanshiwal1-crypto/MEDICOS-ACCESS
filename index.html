@@ -4,86 +4,60 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#071a33">
-
 <title>MEDICOS-ACCESS | Medical Learning Platform</title>
 
 <style>
-:root{
-  --navy:#071a33;
-  --blue:#087cff;
-  --cyan:#16c7ff;
-  --white:#ffffff;
-  --text:#18304d;
-  --muted:#6d7d91;
-  --light:#f4f8fc;
-  --border:#e3edf7;
-  --shadow:0 20px 60px rgba(7,39,75,.12);
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#16304d;background:#f7fbff}
+a{text-decoration:none}
+.container{width:92%;max-width:1150px;margin:auto}
+
+/* NAV */
+nav{
+position:fixed;top:0;width:100%;z-index:10;
+background:rgba(255,255,255,.92);backdrop-filter:blur(15px);
+border-bottom:1px solid #e4edf6;padding:14px 0
 }
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:Inter,Segoe UI,Arial,sans-serif;
-  color:var(--text);
-  background:#fff;
-  overflow-x:hidden;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-.container{
-  width:min(1180px,92%);
-  margin:auto;
-}
-
-/* NAVBAR */
-
-.navbar{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:1000;
-  padding:18px 0;
-  background:rgba(255,255,255,.82);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(220,232,244,.7);
-}
-
-.nav{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.logo{
-  display:flex;
-  align-items:center;
-  gap:11px;
-  font-size:20px;
-  font-weight:900;
-  letter-spacing:-.5px;
-  color:var(--navy);
-}
-
+.nav{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:20px;font-weight:900;color:#071a33}
+.logo span{color:#087cff}
 .logo-icon{
-  width:42px;
-  height:42px;
-  border-radius:13px;
-  display:grid;
-  place-items:center;
-  color:white;
-  font-size:21px;
-  background:linear-gradient(135deg,var(--blue),var(--cyan));
-  box-shadow:0 10px
+display:inline-grid;place-items:center;width:38px;height:38px;
+margin-right:8px;border-radius:12px;color:white;
+background:linear-gradient(135deg,#087cff,#15c9ff)
+}
+.links{display:flex;gap:25px;align-items:center}
+.links a{color:#52677e;font-size:14px;font-weight:bold}
+.navbtn{background:#071a33!important;color:white!important;padding:11px 17px;border-radius:10px}
+
+/* HERO */
+.hero{
+padding:145px 0 90px;
+background:radial-gradient(circle at 85% 20%,#dff7ff,transparent 30%),
+linear-gradient(135deg,#fff,#edf7ff)
+}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.badge{
+display:inline-block;padding:8px 13px;border-radius:30px;
+background:#e5f4ff;color:#087cff;font-size:11px;font-weight:bold;
+margin-bottom:18px
+}
+h1{font-size:58px;line-height:1.03;color:#071a33;letter-spacing:-2px}
+h1 span{color:#087cff}
+.hero p{font-size:16px;color:#6d7d91;line-height:1.8;margin:22px 0 28px;max-width:580px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+display:inline-block;padding:14px 20px;border-radius:12px;
+font-weight:bold;font-size:14px
+}
+.primary{background:#087cff;color:white;box-shadow:0 12px 25px #087cff33}
+.secondary{background:white;color:#071a33;border:1px solid #dce8f3}
+
+/* DASHBOARD */
+.dashboard{
+background:white;border:1px solid #dce9f4;border-radius:25px;
+padding:22px;box-shadow:0 20px 60px #173b5d1c
+}
+.dtop{display:flex;justify-content:space-between;margin-bottom:16px}
+.dtitle{font-size:12px;font-weight:bold;color:#728
