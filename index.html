@@ -3,48 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MEDICOS-ACCESS | Student Dashboard</title>
+<meta name="theme-color" content="#06172d">
+<title>MEDICOS-ACCESS | Student Learning Platform</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,sans-serif;background:#f3f7fb;color:#18344e}a{text-decoration:none}.wrap{width:92%;max-width:1150px;margin:auto}
-nav{height:68px;background:#fff;border-bottom:1px solid #e1eaf2;position:fixed;top:0;width:100%;z-index:10}.nav{height:100%;display:flex;align-items:center;justify-content:space-between}.logo{font-size:19px;font-weight:900;color:#06172d}.logo span{color:#087cff}.navlinks{display:flex;gap:24px}.navlinks a{font-size:13px;color:#60758a;font-weight:bold}.login{background:#087cff;color:#fff;padding:11px 18px;border-radius:10px;font-size:12px;font-weight:bold}
-.hero{padding:120px 0 45px;background:linear-gradient(135deg,#06172d,#073c70);color:#fff}.welcome{display:flex;justify-content:space-between;align-items:center;gap:30px}.welcome small{color:#55dcff;font-weight:bold;letter-spacing:2px}.welcome h1{font-size:38px;margin:10px 0}.welcome p{color:#b9cada;font-size:14px}.avatar{width:65px;height:65px;border-radius:50%;display:grid;place-items:center;background:#087cff;font-size:27px;border:3px solid #fff4}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.stats{margin-top:-5px;padding-bottom:10px}.card{background:#fff;border:1px solid #e1eaf2;border-radius:18px;padding:21px;box-shadow:0 10px 30px #173c5c0d}.stat{display:flex;align-items:center;gap:13px}.staticon{width:42px;height:42px;border-radius:12px;background:#eaf5ff;display:grid;place-items:center;font-size:20px}.stat b{font-size:22px;color:#06172d}.stat small{display:block;color:#8091a2;font-size:10px;margin-top:3px}
-section{padding:38px 0}.title{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.title h2{font-size:23px;color:#06172d}.title a{font-size:11px;color:#087cff;font-weight:bold}.courses{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.course{overflow:hidden;background:#fff;border:1px solid #e0e9f2;border-radius:19px}.cover{height:115px;padding:20px;color:#fff;background:linear-gradient(135deg,#087cff,#063e7c)}.cover.green{background:linear-gradient(135deg,#087c76,#053e58)}.cover.purple{background:linear-gradient(135deg,#6955dc,#30326e)}.cover small{font-size:9px;letter-spacing:1px}.cover h3{margin-top:13px;font-size:18px}.coursebody{padding:18px}.coursebody p{font-size:12px;color:#718396;line-height:1.6}.bar{height:7px;background:#e6eef5;border-radius:10px;margin:15px 0 8px}.bar span{display:block;height:100%;width:78%;background:#087cff;border-radius:10px}.coursebody label{font-size:10px;color:#789}.continue{display:block;text-align:center;margin-top:13px;background:#eaf5ff;color:#087cff;padding:10px;border-radius:9px;font-size:11px;font-weight:bold}
-.activity{display:grid;grid-template-columns:2fr 1fr;gap:18px}.activityrow{display:flex;align-items:center;gap:14px;padding:15px 0;border-bottom:1px solid #edf2f6}.activityrow:last-child{border:0}.circle{width:39px;height:39px;border-radius:12px;background:#eef7ff;display:grid;place-items:center}.activityrow b{font-size:12px}.activityrow small{display:block;color:#8998a7;margin-top:4px;font-size:10px}
-.exam{background:linear-gradient(135deg,#06172d,#075c9d);border-radius:20px;padding:28px;color:#fff}.exam small{color:#54dcff;font-weight:bold;letter-spacing:1px}.exam h2{margin:9px 0;font-size:25px}.exam p{font-size:12px;color:#b8ccdd;line-height:1.6}.exam a{display:inline-block;margin-top:18px;background:#fff;color:#06172d;padding:11px 16px;border-radius:9px;font-size:11px;font-weight:bold}
-footer{background:#06172d;color:#fff;text-align:center;padding:28px;font-size:11px}footer span{color:#4fdcff}
-@media(max-width:750px){.navlinks{display:none}.login{padding:9px 13px}.welcome h1{font-size:29px}.grid{grid-template-columns:repeat(2,1fr)}.courses{grid-template-columns:1fr}.activity{grid-template-columns:1fr}.stat{padding:4px}.stat b{font-size:19px}.title h2{font-size:20px}}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Arial,sans-serif;background:#f3f7fb;color:#18344e}a{text-decoration:none}.wrap{width:92%;max-width:1150px;margin:auto}
+nav{height:68px;background:#ffffffee;backdrop-filter:blur(15px);border-bottom:1px solid #dfe8f0;position:fixed;top:0;width:100%;z-index:99}.nav{height:100%;display:flex;align-items:center;justify-content:space-between}.logo{font-size:19px;font-weight:900;color:#06172d}.logo span{color:#087cff}.links{display:flex;gap:23px}.links a{font-size:12px;color:#60758a;font-weight:bold}.login{background:#087cff;color:#fff;padding:11px 17px;border-radius:10px;font-size:11px;font-weight:bold}
+.hero{padding:125px 0 48px;background:radial-gradient(circle at 85% 15%,#18bfff33,transparent 28%),linear-gradient(135deg,#06172d,#084679);color:#fff}.welcome{display:flex;align-items:center;justify-content:space-between}.welcome small,.head small,.exam small{color:#54dcff;font-weight:bold;letter-spacing:2px}.welcome h1{font-size:39px;margin:10px 0}.welcome p{color:#b8ccdd;font-size:14px}.avatar{width:65px;height:65px;border-radius:50%;display:grid;place-items:center;background:#087cff;font-size:28px;border:3px solid #ffffff33}
+section{padding:42px 0}.stats{padding-top:20px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card,.course{background:#fff;border:1px solid #dfe8f0;border-radius:19px;box-shadow:0 10px 35px #163b5d0d}.stat{padding:20px;display:flex;align-items:center;gap:13px}.icon{width:43px;height:43px;border-radius:12px;background:#eaf5ff;display:grid;place-items:center;font-size:20px}.stat b{font-size:22px;color:#06172d}.stat small{display:block;color:#8091a2;font-size:10px;margin-top:3px}
+.head{text-align:center;margin:10px auto 35px;max-width:680px}.head h2{font-size:35px;color:#06172d;margin:9px 0}.head p{color:#718296;line-height:1.7;font-size:13px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.feature{padding:25px}.feature h3{color:#06172d;margin:10px 0 7px}.feature p{color:#718296;font-size:12px;line-height:1.65}
+.exam{background:#eef6fc}.examcard,.botcard{background:linear-gradient(135deg,#06172d,#075c9e);color:#fff;border-radius:23px;padding:32px;display:flex;justify-content:space-between;align-items:center;gap:25px}.examcard h2,.botcard h2{font-size:29px;margin:9px 0}.examcard p,.botcard p{color:#b9ccdc;font-size:13px;line-height:1.6;max-width:650px}.btn{display:inline-block;padding:13px 18px;border-radius:10px;font-size:11px;font-weight:bold;white-space:nowrap}.white{background:#fff;color:#06172d}.blue{background:#087cff;color:#fff}
+.courses{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.course{overflow:hidden}.cover{padding:22px;color:#fff;min-height:112px;background:linear-gradient(135deg,#087cff,#06427d)}.cover:nth-child(2){background:linear-gradient(135deg,#087c76,#06445b)}.green{background:linear-gradient(135deg,#087c76,#06445b)!important}.purple{background:linear-gradient(135deg,#6955dc,#34346f)!important}.cover small{font-size:9px;letter-spacing:1px;background:#ffffff20;padding:5px 8px;border-radius:15px}.cover h3{margin-top:16px;font-size:17px}.coursebody{padding:18px}.coursebody p{font-size:12px;color:#718296;line-height:1.55;min-height:40px}.contact{display:block;text-align:center;margin-top:15px;background:#eaf5ff;color:#087cff;padding:11px;border-radius:9px;font-size:11px;font-weight:bold}
+.activity{display:grid;grid-template-columns:2fr 1fr;gap:18px}.activitybox{padding:23px}.title{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.title h2{font-size:22px;color:#06172d}.title a{font-size:10px;color:#087cff;font-weight:bold}.row{display:flex;gap:13px;align-items:center;padding:14px 0;border-bottom:1px solid #edf2f6}.row:last-child{border:0}.rowicon{width:38px;height:38px;border-radius:11px;background:#eef7ff;display:grid;place-items:center}.row b{font-size:12px}.row small{display:block;color:#8998a7;font-size:10px;margin-top:4px}
+footer{background:#06172d;color:#fff;text-align:center;padding:30px;font-size:11px}footer span{color:#54dcff}
+@media(max-width:750px){.links{display:none}.hero{padding-top:110px}.welcome h1{font-size:29px}.avatar{width:55px;height:55px}.grid4{grid-template-columns:repeat(2,1fr)}.grid3,.courses{grid-template-columns:1fr}.activity{grid-template-columns:1fr}.examcard,.botcard{display:block}.examcard .btn,.botcard .btn{margin-top:20px}.head h2{font-size:29px}}
 </style>
 </head>
 <body>
 
-<nav><div class="wrap nav"><a class="logo" href="#">⚕ MEDICOS-<span>ACCESS</span></a><div class="navlinks"><a href="#dashboard">Dashboard</a><a href="#courses">Courses</a><a href="#tests">Tests</a><a href="https://t.me/Medicos_Accessbot" target="_blank">Study Bot</a></div><a class="login" href="#dashboard">Student Area</a></div></nav>
+<nav><div class="wrap nav">
+<a class="logo" href="#home">⚕ MEDICOS-<span>ACCESS</span></a>
+<div class="links"><a href="#home">Home</a><a href="#study">Study</a><a href="#courses">Paid Courses</a><a href="#exam">NORCET</a><a href="#bot">Bot</a></div>
+<a class="login" href="#dashboard">Student Area</a>
+</div></nav>
 
-<header class="hero" id="dashboard"><div class="wrap welcome"><div><small>STUDENT DASHBOARD</small><h1>Welcome Back, Student 👋</h1><p>Your preparation. Your progress. Your journey.</p></div><div class="avatar">👨‍⚕️</div></div></header>
+<header class="hero" id="home"><div class="wrap welcome">
+<div><small>MEDICAL LEARNING PLATFORM</small><h1>Welcome Back, Student 👋</h1><p>Learn smarter • Practice better • Prepare with confidence</p></div>
+<div class="avatar">👨‍⚕️</div>
+</div></header>
 
-<section class="stats"><div class="wrap grid">
-<div class="card stat"><div class="staticon">📚</div><div><b>03</b><small>My Courses</small></div></div>
-<div class="card stat"><div class="staticon">🎯</div><div><b>78%</b><small>Overall Progress</small></div></div>
-<div class="card stat"><div class="staticon">📝</div><div><b>12</b><small>Tests Attempted</small></div></div>
-<div class="card stat"><div class="staticon">🔥</div><div><b>07</b><small>Day Streak</small></div></div>
+<section class="stats" id="dashboard"><div class="wrap grid4">
+<div class="card stat"><div class="icon">📚</div><div><b>03</b><small>My Courses</small></div></div>
+<div class="card stat"><div class="icon">🎯</div><div><b>78%</b><small>Progress</small></div></div>
+<div class="card stat"><div class="icon">📝</div><div><b>12</b><small>Tests</small></div></div>
+<div class="card stat"><div class="icon">🔥</div><div><b>07</b><small>Day Streak</small></div></div>
 </div></section>
 
-<section id="courses"><div class="wrap"><div class="title"><h2>My Learning</h2><a href="#">VIEW ALL →</a></div><div class="courses">
-<div class="course"><div class="cover"><small>PREMIUM COURSE</small><h3>Medical Preparation</h3></div><div class="coursebody"><p>Focused study resources for medical learners.</p><div class="bar"><span></span></div><label>78% completed</label><a class="continue" href="https://t.me/Medicos_Accessbot" target="_blank">Continue Learning →</a></div></div>
-<div class="course"><div class="cover green"><small>EXAM PREP</small><h3>NORCET Preparation</h3></div><div class="coursebody"><p>Exam-focused preparation and revision resources.</p><div class="bar"><span style="width:42%"></span></div><label>42% completed</label><a class="continue" href="https://t.me/Medicos_Accessbot" target="_blank">Open Preparation →</a></div></div>
-<div class="course"><div class="cover purple"><small>COMING SOON</small><h3>Ultimate Revision</h3></div><div class="coursebody"><p>Fast revision tools for serious aspirants.</p><div class="bar"><span style="width:10%"></span></div><label>Coming Soon</label><a class="continue" href="#tests">Explore →</a></div></div>
+<section id="study"><div class="wrap">
+<div class="head"><small>STUDY ECOSYSTEM</small><h2>Everything In One Place.</h2><p>Resources and tools designed for focused medical exam preparation.</p></div>
+<div class="grid3">
+<div class="card feature"><div class="icon">📚</div><h3>Study Material</h3><p>Notes, PDFs and useful learning resources in one place.</p></div>
+<div class="card feature"><div class="icon">📝</div><h3>Practice Tests</h3><p>Practice questions and tests to improve your preparation.</p></div>
+<div class="card feature"><div class="icon">🤖</div><h3>Study Bot</h3><p>Connect with your MEDICOS-ACCESS Telegram study assistant.</p></div>
 </div></div></section>
 
-<section id="tests"><div class="wrap activity"><div class="card"><div class="title"><h2>Recent Activity</h2><a href="#">VIEW ALL</a></div>
-<div class="activityrow"><div class="circle">📖</div><div><b>Medical Preparation</b><small>Continued learning • Today</small></div></div>
-<div class="activityrow"><div class="circle">📝</div><div><b>Practice Test</b><small>Test section • Yesterday</small></div></div>
-<div class="activityrow"><div class="circle">🎯</div><div><b>NORCET Preparation</b><small>Exam hub • 2 days ago</small></div></div>
+<section class="exam" id="exam"><div class="wrap"><div class="examcard">
+<div><small>NORCET • EXAM PREPARATION</small><h2>NORCET Preparation Hub 🎯</h2><p>Dedicated space for focused preparation, practice and revision. More features coming soon.</p></div>
+<a class="btn white" href="https://t.me/Medicos_Accessbot" target="_blank">Open Study Bot →</a>
+</div></div></section>
+
+<section id="courses"><div class="wrap">
+<div class="head"><small>💎 PAID COURSES</small><h2>Premium Courses</h2><p>Select a course and contact our Telegram Bot for access and details.</p></div>
+<div class="courses">
+
+<div class="course"><div class="cover"><small>NNL</small><h3>NNL C+ X Ed</h3></div><div class="coursebody"><p>Premium preparation batch.</p><a class="contact" href="https://t.me/Medicos_Accessbot" target="_blank">Contact on Telegram →</a></div></div>
+
+<div class="course"><div class="cover green"><small>NNL</small><h3>NNL Fastrack 11</h3></div><div class="coursebody"><p>Fast-track preparation batch.</p><a class="contact" href="https://t.me/Medicos_Accessbot" target="_blank">Contact on Telegram →</a></div></div>
+
+<div class="course"><div class="cover purple"><small>NNL</small><h3>Z to F Express Batch</h3></div><div class="coursebody"><p>Express preparation batch.</p><a class="contact" href="https://t.me/Medicos_Accessbot" target="_blank">Contact on Telegram →</a></div></div>
+
+<div class="course"><div class="cover"><small>NNL</small><h3>NNL Test Series Strike</h3></div><div class="coursebody"><p>Test series for practice.</p><a class="contact" href="https://t.me/Medicos_Accessbot" target="_blank">Contact on Telegram →</a></div></div>
+
+<div class="course"><div class="cover green"><small>NNL</small><h3>NNL C+ PLATINUM</h3></div><div class="coursebody"><p>Premium preparation package.</p><a class="contact" href="https://t.me/Medicos_Accessbot" target="_blank">Contact on Telegram →</a></div></div>
+
+<div class="course"><div class="cover purple"><small>COMBO</small><h3>Combo</h3></div><div class="coursebody"><p>Multiple resources in one package.</p><a class="contact" href="https://t.me/Medicos_Accessbot" target="_blank">Contact on Telegram →</a></div></div>
+
+<div class="course"><div class="cover"><small>TNC</small><h3>TNC Advance Unique Batch</h3></div><div class="coursebody"><p>Advanced preparation batch.</p><a class="contact" href="https://t.me/Medicos_Accessbot" target="_blank">Contact on Telegram →</a></div></div>
+
+<div class="course"><div class="cover green"><small>NPREP</small><h3>NPREP ALL BATCH</h3></div><div class="coursebody"><p>Complete preparation batch.</p><a class="contact" href="https://t.me/Medicos_Accessbot" target="_blank">Contact on Telegram →</a></div></div>
+
+<div class="course"><div class="cover purple"><small>NORCET</small><h3>E5, E4, E3 Edition</h3></div><div class="coursebody"><p>For NORCET 11 and 12 preparation.</p><a class="contact" href="https://t.me/Medicos_Accessbot" target="_blank">Contact on Telegram →</a></div></div>
+
+<div class="course"><div class="cover"><small>UTKARSH</small><h3>UTKARSH ALL BATCH</h3></div><div class="coursebody"><p>Complete batch collection.</p><a class="contact" href="https://t.me/Medicos_Accessbot" target="_blank">Contact on Telegram →</a></div></div>
+
+<div class="course"><div class="cover green"><small>PW</small><h3>PW NORCET BATCH</h3></div><div class="coursebody"><p>NORCET preparation batch.</p><a class="contact" href="https://t.me/Medicos_Accessbot" target="_blank">Contact on Telegram →</a></div></div>
+
+<div class="course"><div class="cover purple"><small>RNA</small><h3>CONCEPT RNA</h3></div><div class="coursebody"><p>Concept-focused preparation.</p><a class="contact" href="https://t.me/Medicos_Accessbot" target="_blank">Contact on Telegram →</a></div></div>
+
+</div></div></section>
+
+<section><div class="wrap activity">
+<div class="card activitybox"><div class="title"><h2>Recent Activity</h2><a href="#">VIEW ALL</a></div>
+<div class="row"><div class="rowicon">📖</div><div><b>Medical Preparation</b><small>Continue learning • Today</small></div></div>
+<div class="row"><div class="rowicon">📝</div><div><b>Practice Test</b><small>Test section • Yesterday</small></div></div>
+<div class="row"><div class="rowicon">🎯</div><div><b>NORCET Preparation</b><small>Exam Hub • Recently</small></div></div>
 </div>
-<div class="exam"><small>EXAM ZONE</small><h2>Ready For Your Next Test?</h2><p>Practice consistently and track your preparation to improve your confidence.</p><a href="https://t.me/Medicos_Accessbot" target="_blank">Start Practice →</a></div>
+<div class="examcard"><div><small>SMART ASSISTANT</small><h2>Study Bot 🤖</h2><p>Get course information and connect through Telegram.</p><a class="btn white" href="https://t.me/Medicos_Accessbot" target="_blank">Open Bot →</a></div></div>
 </div></section>
 
-<section><div class="wrap"><div class="exam"><small>🤖 SMART STUDY ASSISTANT</small><h2>Study With MEDICOS-ACCESS Bot</h2><p>Access your learning ecosystem directly through Telegram.</p><a href="https://t.me/Medicos_Accessbot" target="_blank">Open Study Bot →</a></div></div></section>
+<section id="bot"><div class="wrap"><div class="botcard">
+<div><small>MEDICOS-ACCESS BOT</small><h2>Your Study Assistant 🤖</h2><p>For paid course details, availability and access, contact our Telegram Bot.</p></div>
+<a class="btn white" href="https://t.me/Medicos_Accessbot" target="_blank">Contact @Medicos_Accessbot →</a>
+</div></div></section>
 
 <footer>⚕ <b>MEDICOS-<span>ACCESS</span></b><p>Learn. Practice. Succeed. • © 2026</p></footer>
+
 </body>
 </html>
