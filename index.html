@@ -3,135 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071a33">
 
-<title>MEDICOS-ACCESS | Learn. Prepare. Succeed.</title>
-
-<meta name="description" content="MEDICOS-ACCESS - Premium Medical & Nursing Learning Platform">
+<title>MEDICOS-ACCESS | Medical Learning Platform</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+:root{
+  --navy:#071a33;
+  --blue:#087cff;
+  --cyan:#16c7ff;
+  --white:#ffffff;
+  --text:#18304d;
+  --muted:#6d7d91;
+  --light:#f4f8fc;
+  --border:#e3edf7;
+  --shadow:0 20px 60px rgba(7,39,75,.12);
+}
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:'Inter',Arial,sans-serif;
-    background:#f7fbff;
-    color:#102a43;
-    overflow-x:hidden;
-}
-
-:root{
-    --blue:#0877ff;
-    --blue2:#005bea;
-    --navy:#071b35;
-    --text:#102a43;
-    --muted:#71839a;
-    --white:#fff;
-    --border:#dfeaf6;
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  color:var(--text);
+  background:#fff;
+  overflow-x:hidden;
 }
 
 a{
-    text-decoration:none;
+  text-decoration:none;
+  color:inherit;
 }
 
 .container{
-    width:min(1180px,92%);
-    margin:auto;
+  width:min(1180px,92%);
+  margin:auto;
 }
 
 /* NAVBAR */
 
-header{
-    position:sticky;
-    top:0;
-    z-index:999;
-    background:rgba(255,255,255,.88);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(220,232,245,.7);
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  padding:18px 0;
+  background:rgba(255,255,255,.82);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(220,232,244,.7);
 }
 
-.navbar{
-    height:74px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-weight:800;
-    font-size:20px;
-    color:var(--navy);
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font-size:20px;
+  font-weight:900;
+  letter-spacing:-.5px;
+  color:var(--navy);
 }
 
-.logo-box{
-    width:42px;
-    height:42px;
-    border-radius:13px;
-    background:linear-gradient(135deg,#0877ff,#00a8ff);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-size:23px;
-    box-shadow:0 8px 22px rgba(8,119,255,.28);
-}
-
-.logo span{
-    color:var(--blue);
-}
-
-nav{
-    display:flex;
-    align-items:center;
-    gap:28px;
-}
-
-nav a{
-    color:#45617e;
-    font-size:14px;
-    font-weight:600;
-    transition:.2s;
-}
-
-nav a:hover{
-    color:var(--blue);
-}
-
-.nav-btn{
-    background:var(--blue);
-    color:white!important;
-    padding:11px 18px;
-    border-radius:10px;
-    box-shadow:0 8px 20px rgba(8,119,255,.22);
-}
-
-.menu{
-    display:none;
-    border:0;
-    background:#eaf4ff;
-    color:var(--blue);
-    padding:10px 13px;
-    border-radius:10px;
-    font-size:20px;
-}
-
-/* HERO */
-
-.hero{
-    position:relative;
-    min-height:650px;
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    align-items:center;
-    gap:60
+.logo-icon{
+  width:42px;
+  height:42px;
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  color:white;
+  font-size:21px;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  box-shadow:0 10px
