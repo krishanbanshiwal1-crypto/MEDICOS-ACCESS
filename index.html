@@ -2,123 +2,882 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#06152b">
-<title>MEDICOS-ACCESS | Learn Smarter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07111f">
+<title>MEDICOS-ACCESS | Nursing & NORCET Preparation</title>
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Arial,sans-serif;background:#f4f8fc;color:#17324d}a{text-decoration:none}.wrap{width:92%;max-width:1150px;margin:auto}
-nav{height:68px;position:fixed;top:0;width:100%;z-index:99;background:#ffffffee;backdrop-filter:blur(15px);border-bottom:1px solid #dfe8f0}.nav{height:100%;display:flex;align-items:center;justify-content:space-between}.logo{font-size:19px;font-weight:900;color:#06152b}.logo span,.blueText{color:#087cff}.links{display:flex;gap:22px}.links a{font-size:12px;font-weight:bold;color:#60758a}.navbtn{background:#087cff;color:#fff;padding:11px 16px;border-radius:10px;font-size:11px;font-weight:bold}
-.hero{padding:135px 0 80px;color:#fff;background:radial-gradient(circle at 80% 20%,#18cfff44,transparent 28%),radial-gradient(circle at 15% 80%,#087cff33,transparent 25%),linear-gradient(135deg,#06152b,#07467c 55%,#06152b)}.heroGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}.badge{display:inline-block;border:1px solid #48dfff55;background:#ffffff0d;color:#5cddff;border-radius:30px;padding:8px 13px;font-size:9px;font-weight:bold;letter-spacing:2px}.hero h1{font-size:58px;line-height:1.02;margin:20px 0;letter-spacing:-2px}.hero h1 span{color:#36d9ff}.hero p{color:#b7c9da;font-size:14px;line-height:1.8;max-width:590px}.btn{display:inline-block;padding:13px 18px;border-radius:11px;font-size:11px;font-weight:bold;margin:22px 5px 0 0}.primary{background:#087cff;color:#fff;box-shadow:0 12px 30px #087cff44}.outline{border:1px solid #ffffff35;color:#fff;background:#ffffff0b}
-.preview{padding:20px;border:1px solid #ffffff22;background:#ffffff0d;border-radius:25px;box-shadow:0 25px 70px #0006}.ptop{display:flex;justify-content:space-between;color:#a8bed0;font-size:10px;margin-bottom:15px}.live{color:#41e1a0}.profile{padding:23px;border-radius:18px;background:linear-gradient(135deg,#087cff,#07518d)}.profile small{color:#d3e8fa;font-size:9px}.profile h2{margin:9px 0 18px}.bar{height:7px;background:#ffffff35;border-radius:9px}.bar span{display:block;width:78%;height:100%;background:#45ddff;border-radius:9px}.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:9px}.mini div{padding:15px 5px;text-align:center;border:1px solid #ffffff16;background:#ffffff08;border-radius:13px;font-size:17px;color:#fff}.mini b{display:block;font-size:17px;margin-top:5px}
-.stats{margin-top:-32px;position:relative}.statsbox{background:#fff;border:1px solid #dfe8f0;border-radius:20px;box-shadow:0 15px 40px #163b5d15;display:grid;grid-template-columns:repeat(4,1fr)}.stat{padding:23px;text-align:center;border-right:1px solid #e6edf3}.stat:last-child{border:0}.stat b{display:block;font-size:25px;color:#087cff}.stat small{font-size:10px;color:#7c8e9e;font-weight:bold}
-section{padding:80px 0}.head{text-align:center;max-width:680px;margin:0 auto 38px}.head small{color:#087cff;font-size:10px;font-weight:900;letter-spacing:2px}.head h2{font-size:37px;color:#06152b;margin:9px 0}.head p{font-size:13px;color:#718296;line-height:1.7}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{padding:25px;background:#fff;border:1px solid #dfe8f0;border-radius:20px;transition:.25s}.feature:hover,.course:hover{transform:translateY(-5px);box-shadow:0 18px 45px #163b5d16}.ico{font-size:27px}.feature h3{margin:12px 0 7px;color:#06152b}.feature p{font-size:12px;color:#718296;line-height:1.65}
-.exam{background:#edf6fc}.examcard,.botcard{padding:35px;border-radius:25px;color:#fff;background:linear-gradient(135deg,#06152b,#075d9f);display:flex;align-items:center;justify-content:space-between;gap:25px}.examcard small,.botcard small{color:#52ddff;font-size:9px;font-weight:bold;letter-spacing:2px}.examcard h2,.botcard h2{font-size:30px;margin:9px 0}.examcard p,.botcard p{font-size:13px;color:#b9ccdc;line-height:1.6;max-width:650px}.white{background:#fff;color:#06152b}
-.courseTools{display:flex;gap:10px;margin-bottom:20px}.search{flex:1;border:1px solid #dce7ef;background:#fff;border-radius:12px;padding:14px;font-size:12px;outline:none}.filter{border:1px solid #dce7ef;background:#fff;border-radius:12px;padding:0 12px;font-size:11px;color:#52687c}.courses{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.course{overflow:hidden;background:#fff;border:1px solid #dfe8f0;border-radius:20px;transition:.25s}.cover{padding:22px;min-height:115px;color:#fff;background:linear-gradient(135deg,#087cff,#06427c)}.green{background:linear-gradient(135deg,#078678,#06495d)}.purple{background:linear-gradient(135deg,#7159df,#36376e)}.cover small{font-size:9px;background:#ffffff20;padding:5px 8px;border-radius:20px;letter-spacing:1px}.cover h3{font-size:17px;margin-top:16px}.coursebody{padding:18px}.coursebody p{font-size:12px;color:#718296;line-height:1.6;min-height:39px}.contact{display:block;text-align:center;margin-top:15px;background:#eaf5ff;color:#087cff;padding:11px;border-radius:10px;font-size:11px;font-weight:bold}
-.activity{display:grid;grid-template-columns:1.5fr 1fr;gap:18px}.box{background:#fff;border:1px solid #dfe8f0;border-radius:20px;padding:23px}.title{display:flex;justify-content:space-between;margin-bottom:10px}.title h3{color:#06152b}.title a{font-size:10px;color:#087cff;font-weight:bold}.row{display:flex;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid #edf2f6}.row:last-child{border:0}.rowico{width:38px;height:38px;border-radius:11px;background:#eef7ff;display:grid;place-items:center}.row b{font-size:12px}.row small{display:block;font-size:10px;color:#8a99a7;margin-top:4px}
-footer{background:#06152b;color:#fff;text-align:center;padding:32px;font-size:11px}footer span{color:#4edcff}.bottom{display:none}
-@media(max-width:750px){.links{display:none}.hero{padding-top:110px}.heroGrid{grid-template-columns:1fr;gap:40px}.hero h1{font-size:43px}.statsbox{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border:0}.stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid #e6edf3}.grid3,.courses,.activity{grid-template-columns:1fr}.examcard,.botcard{display:block}.courseTools{display:grid;grid-template-columns:1fr}.filter{height:44px}.bottom{display:flex;position:fixed;bottom:0;left:0;width:100%;height:60px;background:#06152bee;backdrop-filter:blur(12px);z-index:100;justify-content:space-around;align-items:center}.bottom a{color:#b9ccdc;text-align:center;font-size:9px}.bottom b{display:block;font-size:18px;margin-bottom:3px}.head h2{font-size:30px}}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#050b14;
+  --card:#0c1726;
+  --card2:#101e30;
+  --blue:#16a8ff;
+  --blue2:#006cff;
+  --cyan:#25d9ff;
+  --text:#f5f9ff;
+  --muted:#8fa5bd;
+  --line:rgba(255,255,255,.09);
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:
+  radial-gradient(circle at 80% 10%,rgba(0,140,255,.14),transparent 28%),
+  radial-gradient(circle at 10% 30%,rgba(0,220,255,.07),transparent 25%),
+  var(--bg);
+  color:var(--text);
+  min-height:100vh;
+}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer}
+
+.nav{
+  position:sticky;top:0;z-index:100;
+  height:68px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 6%;
+  background:rgba(5,11,20,.86);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+.logo{
+  display:flex;align-items:center;gap:10px;
+  font-size:19px;font-weight:900;letter-spacing:.5px
+}
+.logo-icon{
+  width:38px;height:38px;border-radius:12px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--blue),var(--blue2));
+  box-shadow:0 0 25px rgba(22,168,255,.3);
+}
+.navlinks{display:flex;gap:24px;color:#b9c8d9;font-size:14px}
+.navlinks a:hover{color:white}
+.bot-btn{
+  padding:11px 17px;border-radius:12px;
+  background:linear-gradient(135deg,var(--blue),var(--blue2));
+  font-weight:800;font-size:13px;
+  box-shadow:0 8px 25px rgba(0,110,255,.22);
+}
+
+.hero{
+  max-width:1200px;margin:auto;
+  padding:85px 6% 55px;
+  display:grid;grid-template-columns:1.15fr .85fr;
+  gap:55px;align-items:center;
+}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 13px;border:1px solid rgba(37,217,255,.22);
+  border-radius:30px;background:rgba(37,217,255,.07);
+  color:#71ddff;font-size:12px;font-weight:800;
+  margin-bottom:20px;
+}
+.badge span{
+  width:7px;height:7px;background:#29e6a0;border-radius:50%;
+  box-shadow:0 0 12px #29e6a0;
+}
+.hero h1{
+  font-size:clamp(42px,6vw,76px);
+  line-height:.98;letter-spacing:-3px;
+  margin-bottom:22px;
+}
+.gradient{
+  background:linear-gradient(90deg,#fff,var(--cyan),#238aff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.hero p{
+  color:var(--muted);font-size:17px;line-height:1.75;
+  max-width:650px;margin-bottom:30px;
+}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap}
+.primary,.secondary{
+  padding:14px 20px;border-radius:13px;font-weight:800;
+  border:1px solid var(--line)
+}
+.primary{
+  background:linear-gradient(135deg,var(--blue),var(--blue2));
+  box-shadow:0 12px 30px rgba(0,108,255,.25)
+}
+.secondary{background:#0b1523;color:#dce9f6}
+.primary:hover,.secondary:hover{transform:translateY(-2px)}
+
+.dashboard{
+  position:relative;
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:25px;
+  background:linear-gradient(145deg,rgba(19,36,57,.9),rgba(7,15,27,.95));
+  box-shadow:0 30px 80px rgba(0,0,0,.35);
+}
+.dtop{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.dtitle{font-size:14px;font-weight:800}
+.live{font-size:11px;color:#49e7a4}
+.progress{
+  background:#08111d;border-radius:14px;padding:17px;margin-bottom:12px
+}
+.progress-row{display:flex;justify-content:space-between;font-size:12px;color:#a8bad0;margin-bottom:9px}
+.bar{height:7px;background:#15283b;border-radius:20px;overflow:hidden}
+.bar i{display:block;height:100%;width:78%;background:linear-gradient(90deg,var(--blue),var(--cyan));border-radius:20px}
+.dcards{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.mini{
+  padding:16px;border:1px solid var(--line);border-radius:14px;
+  background:#0a1422
+}
+.mini strong{font-size:21px}
+.mini small{display:block;color:#7f96ae;margin-top:4px}
+
+.section{max-width:1200px;margin:auto;padding:65px 6%}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:25px}
+.eyebrow{color:#43d8ff;font-size:11px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase}
+.section h2{font-size:32px;margin-top:7px}
+.section-head p{color:var(--muted);font-size:13px;max-width:430px;line-height:1.6}
+
+.stats{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:12px
+}
+.stat{
+  padding:23px;border:1px solid var(--line);border-radius:18px;
+  background:rgba(12,23,38,.72)
+}
+.stat b{font-size:28px}
+.stat span{display:block;color:var(--muted);font-size:12px;margin-top:7px}
+
+.ecosystem{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:15px
+}
+.ecard{
+  padding:24px;border:1px solid var(--line);border-radius:20px;
+  background:linear-gradient(145deg,#0c1929,#08111d);
+  transition:.25s
+}
+.ecard:hover{transform:translateY(-5px);border-color:rgba(22,168,255,.4)}
+.icon{
+  width:44px;height:44px;border-radius:14px;display:grid;place-items:center;
+  background:rgba(22,168,255,.1);font-size:21px;margin-bottom:17px
+}
+.ecard h3{font-size:17px;margin-bottom:9px}
+.ecard p{color:var(--muted);font-size:13px;line-height:1.6}
+
+.exam{
+  padding:28px;border-radius:23px;
+  border:1px solid rgba(22,168,255,.2);
+  background:linear-gradient(120deg,rgba(0,108,255,.12),rgba(37,217,255,.04));
+}
+.exam-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}
+.exam h2{font-size:30px;margin:8px 0 12px}
+.exam p{color:var(--muted);line-height:1.65;font-size:14px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.tag{
+  padding:7px 10px;border-radius:9px;
+  background:#0b1828;border:1px solid var(--line);
+  color:#b9cee3;font-size:11px
+}
+
+.course-tools{
+  display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px
+}
+.search{
+  flex:1;min-width:220px;
+  padding:13px 15px;border-radius:12px;
+  border:1px solid var(--line);outline:none;
+  background:#0a1422;color:white
+}
+.filter{
+  padding:13px 15px;border-radius:12px;
+  background:#0a1422;color:#c9d8e8;border:1px solid var(--line)
+}
+.courses{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:15px
+}
+.course{
+  position:relative;
+  padding:21px;border:1px solid var(--line);
+  border-radius:19px;background:linear-gradient(145deg,#0d1b2d,#08111c);
+  transition:.25s;overflow:hidden
+}
+.course:hover{
+  transform:translateY(-5px);
+  border-color:rgba(22,168,255,.45);
+  box-shadow:0 18px 45px rgba(0,0,0,.22)
+}
+.course-top{display:flex;justify-content:space-between;gap:8px;margin-bottom:17px}
+.course-icon{
+  width:43px;height:43px;border-radius:13px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,rgba(22,168,255,.2),rgba(0,108,255,.08))
+}
+.featured{
+  padding:6px 8px;border-radius:8px;
+  background:rgba(41,230,160,.09);color:#45e7a3;
+  font-size:9px;font-weight:900;height:max-content
+}
+.course h3{font-size:16px;line-height:1.35;margin-bottom:9px}
+.course p{font-size:12px;color:var(--muted);line-height:1.5;min-height:38px}
+.course-bottom{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-top:19px;padding-top:15px;border-top:1px solid var(--line)
+}
+.price{font-size:11px;color:#8fa5bd}
+.view{
+  border:0;padding:9px 12px;border-radius:10px;
+  background:#122b45;color:#75dfff;font-size:11px;font-weight:800
+}
+
+.activity{
+  display:grid;grid-template-columns:1fr 1fr;gap:15px
+}
+.activity-card{
+  padding:21px;border:1px solid var(--line);border-radius:18px;background:#0b1624
+}
+.activity-item{
+  display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)
+}
+.activity-item:last-child{border-bottom:0}
+.dot{width:9px;height:9px;border-radius:50%;background:#20d5ff;margin-top:5px;flex:none}
+.activity-item b{font-size:12px}
+.activity-item span{display:block;color:#7189a1;font-size:10px;margin-top:4px}
+
+.bot{
+  padding:32px;border-radius:24px;
+  background:linear-gradient(135deg,#087df0,#064eb7);
+  display:flex;justify-content:space-between;align-items:center;gap:25px;
+  box-shadow:0 20px 60px rgba(0,100,255,.18)
+}
+.bot h2{font-size:27px;margin-bottom:8px}
+.bot p{font-size:13px;color:#d9edff;line-height:1.5}
+.bot a{
+  white-space:nowrap;padding:13px 18px;border-radius:12px;
+  background:white;color:#0759bb;font-weight:900;font-size:13px
+}
+
+.footer{
+  border-top:1px solid var(--line);
+  padding:28px 6% 90px;color:#7189a1;text-align:center;font-size:11px
+}
+
+/* MODAL */
+.modal{
+  position:fixed;inset:0;z-index:300;
+  display:none;align-items:center;justify-content:center;
+  padding:20px;background:rgba(0,0,0,.75);
+  backdrop-filter:blur(10px)
+}
+.modal.show{display:flex}
+.modal-box{
+  width:min(650px,100%);
+  max-height:90vh;overflow:auto;
+  border:1px solid rgba(22,168,255,.25);
+  border-radius:25px;
+  background:linear-gradient(145deg,#102238,#07111e);
+  box-shadow:0 30px 100px rgba(0,0,0,.55);
+  padding:27px;position:relative
+}
+.close{
+  position:absolute;right:18px;top:17px;
+  width:35px;height:35px;border:1px solid var(--line);
+  border-radius:10px;background:#0b1725;color:#bcd0e3;font-size:19px
+}
+.modal-icon{
+  width:54px;height:54px;border-radius:16px;
+  display:grid;place-items:center;font-size:25px;
+  background:linear-gradient(135deg,var(--blue),var(--blue2));
+  margin-bottom:17px
+}
+.modal h2{font-size:27px;padding-right:40px;margin-bottom:9px}
+.modal-sub{color:#8fa5bd;font-size:13px;line-height:1.6;margin-bottom:22px}
+.detail{
+  padding:15px;border-radius:14px;background:#091522;
+  border:1px solid var(--line);margin-bottom:10px
+}
+.detail b{display:block;font-size:11px;color:#4edbff;margin-bottom:5px}
+.detail span{font-size:13px;color:#d4e1ee}
+.modal-cta{
+  display:block;text-align:center;margin-top:20px;
+  padding:14px;border-radius:13px;
+  background:linear-gradient(135deg,var(--blue),var(--blue2));
+  font-weight:900
+}
+
+.mobile-nav{
+  display:none;position:fixed;bottom:0;left:0;right:0;z-index:150;
+  height:62px;background:rgba(5,11,20,.94);
+  backdrop-filter:blur(15px);border-top:1px solid var(--line);
+  justify-content:space-around;align-items:center
+}
+.mobile-nav a{font-size:10px;color:#7890a8;text-align:center}
+.mobile-nav b{display:block;font-size:17px;margin-bottom:2px}
+.mobile-nav a:hover{color:#fff}
+
+@media(max-width:850px){
+  .nav{padding:0 4%}
+  .navlinks{display:none}
+  .hero{grid-template-columns:1fr;padding-top:55px}
+  .hero h1{letter-spacing:-2px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .ecosystem,.courses{grid-template-columns:repeat(2,1fr)}
+  .exam-grid,.activity{grid-template-columns:1fr}
+  .bot{flex-direction:column;align-items:flex-start}
+  .mobile-nav{display:flex}
+}
+@media(max-width:550px){
+  .section{padding:48px 4%}
+  .hero{padding:48px 4% 30px}
+  .hero h1{font-size:43px}
+  .hero p{font-size:14px}
+  .dashboard{padding:14px}
+  .stats,.ecosystem,.courses{grid-template-columns:1fr}
+  .section h2{font-size:27px}
+  .section-head{display:block}
+  .section-head p{margin-top:10px}
+  .course{padding:18px}
+  .bot{padding:25px}
+  .bot h2{font-size:23px}
+  .bot a{width:100%;text-align:center}
+}
 </style>
 </head>
+
 <body>
 
-<nav><div class="wrap nav">
-<a class="logo" href="#home">⚕ MEDICOS-<span>ACCESS</span></a>
-<div class="links"><a href="#home">Home</a><a href="#study">Study</a><a href="#courses">Paid Courses</a><a href="#exam">NORCET</a><a href="#bot">Bot</a></div>
-<a class="navbtn" href="#dashboard">Student Area</a>
-</div></nav>
+<nav class="nav">
+  <a href="#home" class="logo">
+    <div class="logo-icon">⚕</div>
+    MEDICOS-ACCESS
+  </a>
 
-<header class="hero" id="home"><div class="wrap heroGrid">
-<div>
-<span class="badge">NEXT-GEN MEDICAL LEARNING PLATFORM</span>
-<h1>Study Smarter.<br>Become <span>Better.</span></h1>
-<p>A premium learning ecosystem for medical students and exam aspirants — study material, preparation resources, practice and smart tools in one place.</p>
-<a class="btn primary" href="#courses">Explore Paid Courses →</a>
-<a class="btn outline" href="https://t.me/Medicos_Accessbot" target="_blank">🤖 Study Bot</a>
+  <div class="navlinks">
+    <a href="#home">Home</a>
+    <a href="#study">Study</a>
+    <a href="#exam">NORCET</a>
+    <a href="#courses">Courses</a>
+    <a href="#bot">Bot</a>
+  </div>
+
+  <a class="bot-btn" href="https://t.me/Medicos_Accessbot" target="_blank">
+    🤖 Study Bot
+  </a>
+</nav>
+
+<section class="hero" id="home">
+  <div>
+    <div class="badge"><span></span> NURSING • NORCET • MEDICAL PREP</div>
+
+    <h1>
+      Prepare Smarter.<br>
+      <span class="gradient">Achieve More.</span>
+    </h1>
+
+    <p>
+      Your premium preparation platform for nursing students and competitive
+      medical exams. Notes, study resources, tests, premium courses and
+      Telegram support — all in one place.
+    </p>
+
+    <div class="hero-actions">
+      <a class="primary" href="#courses">Explore Courses →</a>
+      <a class="secondary" href="#study">Start Studying</a>
+    </div>
+  </div>
+
+  <div class="dashboard">
+    <div class="dtop">
+      <div class="dtitle">Student Dashboard</div>
+      <div class="live">● LIVE</div>
+    </div>
+
+    <div class="progress">
+      <div class="progress-row">
+        <span>NORCET Preparation</span>
+        <b>78%</b>
+      </div>
+      <div class="bar"><i></i></div>
+    </div>
+
+    <div class="dcards">
+      <div class="mini">
+        <strong>12+</strong>
+        <small>Premium Courses</small>
+      </div>
+      <div class="mini">
+        <strong>24/7</strong>
+        <small>Bot Support</small>
+      </div>
+      <div class="mini">
+        <strong>100%</strong>
+        <small>Mobile Friendly</small>
+      </div>
+      <div class="mini">
+        <strong>∞</strong>
+        <small>Learning Resources</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="stats">
+    <div class="stat"><b>12+</b><span>Premium Courses</span></div>
+    <div class="stat"><b>4</b><span>Study Categories</span></div>
+    <div class="stat"><b>24/7</b><span>Telegram Support</span></div>
+    <div class="stat"><b>1</b><span>Smart Platform</span></div>
+  </div>
+</section>
+
+<section class="section" id="study">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Study Ecosystem</div>
+      <h2>Everything You Need</h2>
+    </div>
+    <p>Build your preparation with organized resources designed for nursing and competitive exams.</p>
+  </div>
+
+  <div class="ecosystem">
+    <div class="ecard">
+      <div class="icon">📚</div>
+      <h3>Notes & PDFs</h3>
+      <p>Organized study material, revision notes and useful PDF resources.</p>
+    </div>
+
+    <div class="ecard">
+      <div class="icon">📝</div>
+      <h3>Practice Tests</h3>
+      <p>Improve speed, accuracy and exam confidence through regular practice.</p>
+    </div>
+
+    <div class="ecard">
+      <div class="icon">🎯</div>
+      <h3>Exam Preparation</h3>
+      <p>Focused preparation resources for NORCET and nursing examinations.</p>
+    </div>
+
+    <div class="ecard">
+      <div class="icon">🤖</div>
+      <h3>Study Bot</h3>
+      <p>Connect with the Telegram bot for course information and support.</p>
+    </div>
+
+    <div class="ecard">
+      <div class="icon">⚡</div>
+      <h3>Fast Revision</h3>
+      <p>Quick-access resources to help you revise important concepts efficiently.</p>
+    </div>
+
+    <div class="ecard">
+      <div class="icon">🏆</div>
+      <h3>Premium Learning</h3>
+      <p>Explore premium courses and choose the preparation path that suits you.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="exam">
+  <div class="exam">
+    <div class="exam-grid">
+      <div>
+        <div class="eyebrow">NORCET EXAM ZONE</div>
+        <h2>Prepare With A Clear Strategy</h2>
+        <p>
+          Access preparation resources, premium batches, test series and
+          revision-focused learning options from one platform.
+        </p>
+
+        <div class="tags">
+          <span class="tag">NORCET</span>
+          <span class="tag">Nursing</span>
+          <span class="tag">Test Series</span>
+          <span class="tag">Revision</span>
+          <span class="tag">Mock Tests</span>
+        </div>
+      </div>
+
+      <div class="dashboard">
+        <div class="dtop">
+          <div class="dtitle">Preparation Focus</div>
+          <div class="live">READY</div>
+        </div>
+
+        <div class="progress">
+          <div class="progress-row">
+            <span>Concept Building</span><b>85%</b>
+          </div>
+          <div class="bar"><i style="width:85%"></i></div>
+        </div>
+
+        <div class="progress">
+          <div class="progress-row">
+            <span>Revision</span><b>72%</b>
+          </div>
+          <div class="bar"><i style="width:72%"></i></div>
+        </div>
+
+        <div class="progress">
+          <div class="progress-row">
+            <span>Test Practice</span><b>64%</b>
+          </div>
+          <div class="bar"><i style="width:64%"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="courses">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Premium Learning</div>
+      <h2>Paid Courses</h2>
+    </div>
+    <p>Tap any course to view details and contact our Study Bot for access information.</p>
+  </div>
+
+  <div class="course-tools">
+    <input class="search" id="search" type="search" placeholder="🔎 Search course...">
+
+    <select class="filter" id="filter">
+      <option value="all">All Courses</option>
+      <option value="nnl">NNL</option>
+      <option value="norcet">NORCET</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+
+  <div class="courses" id="courseGrid">
+
+    <div class="course" data-cat="nnl" data-course="NNL C+ X Ed"
+      data-desc="Premium NNL preparation program designed for focused nursing exam preparation.">
+      <div class="course-top">
+        <div class="course-icon">🎓</div>
+        <span class="featured">POPULAR</span>
+      </div>
+      <h3>NNL C+ X Ed</h3>
+      <p>Focused premium nursing preparation program.</p>
+      <div class="course-bottom">
+        <span class="price">Contact for Price</span>
+        <button class="view" onclick="openCourse(this)">View Course</button>
+      </div>
+    </div>
+
+    <div class="course" data-cat="nnl" data-course="NNL Fastrack 11"
+      data-desc="Fast-track preparation option for aspirants targeting the upcoming NORCET journey.">
+      <div class="course-top">
+        <div class="course-icon">⚡</div>
+        <span class="featured">FAST TRACK</span>
+      </div>
+      <h3>NNL Fastrack 11</h3>
+      <p>Fast-track preparation for serious aspirants.</p>
+      <div class="course-bottom">
+        <span class="price">Contact for Price</span>
+        <button class="view" onclick="openCourse(this)">View Course</button>
+      </div>
+    </div>
+
+    <div class="course" data-cat="other" data-course="Z to F Express Batch"
+      data-desc="Express learning batch designed to cover preparation in a structured and efficient format.">
+      <div class="course-top">
+        <div class="course-icon">🚀</div>
+      </div>
+      <h3>Z to F Express Batch</h3>
+      <p>Structured express preparation journey.</p>
+      <div class="course-bottom">
+        <span class="price">Contact for Price</span>
+        <button class="view" onclick="openCourse(this)">View Course</button>
+      </div>
+    </div>
+
+    <div class="course" data-cat="nnl" data-course="NNL Test Series Strike"
+      data-desc="Test-focused practice option for improving speed, accuracy and exam readiness.">
+      <div class="course-top">
+        <div class="course-icon">📝</div>
+        <span class="featured">TEST SERIES</span>
+      </div>
+      <h3>NNL Test Series Strike</h3>
+      <p>Practice, analyse and improve your performance.</p>
+      <div class="course-bottom">
+        <span class="price">Contact for Price</span>
+        <button class="view" onclick="openCourse(this)">View Course</button>
+      </div>
+    </div>
+
+    <div class="course" data-cat="nnl" data-course="NNL C+ PLATINUM"
+      data-desc="Premium learning package with a comprehensive preparation approach for nursing aspirants.">
+      <div class="course-top">
+        <div class="course-icon">💎</div>
+        <span class="featured">PLATINUM</span>
+      </div>
+      <h3>NNL C+ PLATINUM</h3>
+      <p>Premium comprehensive preparation package.</p>
+      <div class="course-bottom">
+        <span class="price">Contact for Price</span>
+        <button class="view" onclick="openCourse(this)">View Course</button>
+      </div>
+    </div>
+
+    <div class="course" data-cat="other" data-course="Combo"
+      data-desc="Combo learning option for students looking for a broader preparation package.">
+      <div class="course-top">
+        <div class="course-icon">🎁</div>
+      </div>
+      <h3>Combo</h3>
+      <p>Combined preparation resources in one option.</p>
+      <div class="course-bottom">
+        <span class="price">Contact for Price</span>
+        <button class="view" onclick="openCourse(this)">View Course</button>
+      </div>
+    </div>
+
+    <div class="course" data-cat="other" data-course="TNC Advance Unique Batch"
+      data-desc="Advanced and structured nursing preparation batch for dedicated aspirants.">
+      <div class="course-top">
+        <div class="course-icon">⭐</div>
+        <span class="featured">ADVANCED</span>
+      </div>
+      <h3>TNC Advance Unique Batch</h3>
+      <p>Advanced preparation for dedicated students.</p>
+      <div class="course-bottom">
+        <span class="price">Contact for Price</span>
+        <button class="view" onclick="openCourse(this)">View Course</button>
+      </div>
+    </div>
+
+    <div class="course" data-cat="other" data-course="NPREP ALL BATCH"
+      data-desc="All-batch preparation option for students seeking a broader learning ecosystem.">
+      <div class="course-top">
+        <div class="course-icon">📖</div>
+      </div>
+      <h3>NPREP ALL BATCH</h3>
+      <p>Broad preparation access for nursing aspirants.</p>
+      <div class="course-bottom">
+        <span class="price">Contact for Price</span>
+        <button class="view" onclick="openCourse(this)">View Course</button>
+      </div>
+    </div>
+
+    <div class="course" data-cat="norcet" data-course="E5, E4, E3 Edition"
+      data-desc="E5, E4 and E3 Edition resources for NORCET 11 and NORCET 12 preparation.">
+      <div class="course-top">
+        <div class="course-icon">🏆</div>
+        <span class="featured">NORCET 11 & 12</span>
+      </div>
+      <h3>E5, E4, E3 Edition</h3>
+      <p>For NORCET 11 & 12 preparation.</p>
+      <div class="course-bottom">
+        <span class="price">Contact for Price</span>
+        <button class="view" onclick="openCourse(this)">View Course</button>
+      </div>
+    </div>
+
+    <div class="course" data-cat="other" data-course="UTKARSH ALL BATCH"
+      data-desc="All-batch learning option from the Utkarsh category for nursing exam aspirants.">
+      <div class="course-top">
+        <div class="course-icon">📚</div>
+      </div>
+      <h3>UTKARSH ALL BATCH</h3>
+      <p>Multiple batch preparation option.</p>
+      <div class="course-bottom">
+        <span class="price">Contact for Price</span>
+        <button class="view" onclick="openCourse(this)">View Course</button>
+      </div>
+    </div>
+
+    <div class="course" data-cat="norcet" data-course="PW NORCET BATCH"
+      data-desc="NORCET-focused batch option for aspirants looking for dedicated exam preparation.">
+      <div class="course-top">
+        <div class="course-icon">🎯</div>
+        <span class="featured">NORCET</span>
+      </div>
+      <h3>PW NORCET BATCH</h3>
+      <p>Dedicated NORCET preparation batch.</p>
+      <div class="course-bottom">
+        <span class="price">Contact for Price</span>
+        <button class="view" onclick="openCourse(this)">View Course</button>
+      </div>
+    </div>
+
+    <div class="course" data-cat="other" data-course="CONCEPT RNA"
+      data-desc="Concept-focused learning option designed to strengthen understanding and exam preparation.">
+      <div class="course-top">
+        <div class="course-icon">🧠</div>
+        <span class="featured">CONCEPTS</span>
+      </div>
+      <h3>CONCEPT RNA</h3>
+      <p>Concept-focused preparation for aspirants.</p>
+      <div class="course-bottom">
+        <span class="price">Contact for Price</span>
+        <button class="view" onclick="openCourse(this)">View Course</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Student Activity</div>
+      <h2>Stay On Track</h2>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="activity-card">
+      <div class="activity-item">
+        <div class="dot"></div>
+        <div><b>Premium courses available</b><span>Explore the course section</span></div>
+      </div>
+      <div class="activity-item">
+        <div class="dot"></div>
+        <div><b>Telegram Study Bot</b><span>Get course information directly</span></div>
+      </div>
+      <div class="activity-item">
+        <div class="dot"></div>
+        <div><b>Mobile optimized</b><span>Study from anywhere</span></div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-item">
+        <div class="dot"></div>
+        <div><b>Revision</b><span>Keep your concepts strong</span></div>
+      </div>
+      <div class="activity-item">
+        <div class="dot"></div>
+        <div><b>Practice</b><span>Improve speed and accuracy</span></div>
+      </div>
+      <div class="activity-item">
+        <div class="dot"></div>
+        <div><b>Consistency</b><span>Small progress every day</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="bot">
+  <div class="bot">
+    <div>
+      <h2>🤖 Meet Your Study Bot</h2>
+      <p>
+        Need course information or access help? Connect with
+        MEDICOS-ACCESS on Telegram.
+      </p>
+    </div>
+
+    <a href="https://t.me/Medicos_Accessbot" target="_blank">
+      Open Study Bot →
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  © 2026 MEDICOS-ACCESS • Nursing & NORCET Preparation Platform
+</footer>
+
+<!-- COURSE MODAL -->
+<div class="modal" id="courseModal">
+  <div class="modal-box">
+    <button class="close" onclick="closeCourse()">×</button>
+
+    <div class="modal-icon">🎓</div>
+
+    <h2 id="modalTitle">Course Name</h2>
+
+    <p class="modal-sub" id="modalDesc">
+      Course details will appear here.
+    </p>
+
+    <div class="detail">
+      <b>WHAT'S INCLUDED</b>
+      <span>Course content • Study resources • Preparation support</span>
+    </div>
+
+    <div class="detail">
+      <b>TARGET</b>
+      <span>Nursing / NORCET aspirants</span>
+    </div>
+
+    <div class="detail">
+      <b>ACCESS</b>
+      <span>Course access details will be provided through Telegram.</span>
+    </div>
+
+    <div class="detail">
+      <b>PRICE</b>
+      <span>Contact our Study Bot for the current price and availability.</span>
+    </div>
+
+    <a id="modalBot" class="modal-cta" href="https://t.me/Medicos_Accessbot" target="_blank">
+      🤖 Get This Course
+    </a>
+  </div>
 </div>
-<div class="preview">
-<div class="ptop"><b>STUDENT COMMAND CENTER</b><span class="live">● LIVE</span></div>
-<div class="profile"><small>OVERALL LEARNING PROGRESS</small><h2>Keep Going 🚀</h2><small>78% Completed</small><div class="bar"><span></span></div></div>
-<div class="mini"><div>📚<b>03</b><small>Courses</small></div><div>📝<b>12</b><small>Tests</small></div><div>🔥<b>07</b><small>Streak</small></div></div>
+
+<div class="mobile-nav">
+  <a href="#home"><b>⌂</b>Home</a>
+  <a href="#study"><b>📚</b>Study</a>
+  <a href="#exam"><b>🎯</b>NORCET</a>
+  <a href="#courses"><b>🎓</b>Courses</a>
+  <a href="https://t.me/Medicos_Accessbot" target="_blank"><b>🤖</b>Bot</a>
 </div>
-</div></header>
-
-<div class="stats" id="dashboard"><div class="wrap"><div class="statsbox">
-<div class="stat"><b>03</b><small>My Courses</small></div><div class="stat"><b>78%</b><small>Progress</small></div><div class="stat"><b>12</b><small>Tests</small></div><div class="stat"><b>24/7</b><small>Access</small></div>
-</div></div></div>
-
-<section id="study"><div class="wrap">
-<div class="head"><small>LEARNING ECOSYSTEM</small><h2>Everything In One Place.</h2><p>Simple, focused and built for serious preparation.</p></div>
-<div class="grid3">
-<div class="feature"><div class="ico">📚</div><h3>Study Material</h3><p>Notes, PDFs and useful learning resources.</p></div>
-<div class="feature"><div class="ico">🎯</div><h3>Exam Preparation</h3><p>Focused resources for medical competitive exams.</p></div>
-<div class="feature"><div class="ico">📝</div><h3>Practice Tests</h3><p>Practice and improve your preparation.</p></div>
-<div class="feature"><div class="ico">🤖</div><h3>Study Bot</h3><p>Connect directly through Telegram.</p></div>
-<div class="feature"><div class="ico">⚡</div><h3>Quick Revision</h3><p>Find important resources faster.</p></div>
-<div class="feature"><div class="ico">🔐</div><h3>Student Dashboard</h3><p>Personalized student features coming soon.</p></div>
-</div></div></section>
-
-<section class="exam" id="exam"><div class="wrap"><div class="examcard">
-<div><small>NORCET • EXAM ZONE</small><h2>NORCET Preparation Hub 🎯</h2><p>A dedicated space for preparation, practice and revision. More features are coming soon.</p></div>
-<a class="btn white" href="https://t.me/Medicos_Accessbot" target="_blank">Open Study Bot →</a>
-</div></div></section>
-
-<section id="courses"><div class="wrap">
-<div class="head"><small>💎 PREMIUM LEARNING</small><h2>Paid Courses</h2><p>Select your course and contact our bot for course details and access.</p></div>
-
-<div class="courseTools">
-<input class="search" id="search" placeholder="🔎 Search course..." onkeyup="filterCourses()">
-<select class="filter" id="filter" onchange="filterCourses()"><option value="all">All Courses</option><option value="NNL">NNL</option><option value="NORCET">NORCET</option><option value="OTHER">Other</option></select>
-</div>
-
-<div class="courses" id="courseList">
-
-<div class="course" data-name="NNL C+ X Ed" data-cat="NNL"><div class="cover"><small>NNL</small><h3>NNL C+ X Ed</h3></div><div class="coursebody"><p>Premium preparation batch.</p><a class="contact" href="https://t.me/Medicos_Accessbot?text=Hello%20I%20want%20details%20for%20NNL%20C%2B%20X%20Ed" target="_blank">Contact on Telegram →</a></div></div>
-
-<div class="course" data-name="NNL Fastrack 11" data-cat="NNL"><div class="cover green"><small>NNL</small><h3>NNL Fastrack 11</h3></div><div class="coursebody"><p>Fast-track preparation batch.</p><a class="contact" href="https://t.me/Medicos_Accessbot?text=Hello%20I%20want%20details%20for%20NNL%20Fastrack%2011" target="_blank">Contact on Telegram →</a></div></div>
-
-<div class="course" data-name="Z to F Express Batch" data-cat="NNL"><div class="cover purple"><small>NNL</small><h3>Z to F Express Batch</h3></div><div class="coursebody"><p>Express preparation batch.</p><a class="contact" href="https://t.me/Medicos_Accessbot?text=Hello%20I%20want%20details%20for%20Z%20to%20F%20Express%20Batch" target="_blank">Contact on Telegram →</a></div></div>
-
-<div class="course" data-name="NNL Test Series Strike" data-cat="NNL"><div class="cover"><small>NNL</small><h3>NNL Test Series Strike</h3></div><div class="coursebody"><p>Test series for practice.</p><a class="contact" href="https://t.me/Medicos_Accessbot?text=Hello%20I%20want%20details%20for%20NNL%20Test%20Series%20Strike" target="_blank">Contact on Telegram →</a></div></div>
-
-<div class="course" data-name="NNL C+ PLATINUM" data-cat="NNL"><div class="cover green"><small>NNL</small><h3>NNL C+ PLATINUM</h3></div><div class="coursebody"><p>Premium preparation package.</p><a class="contact" href="https://t.me/Medicos_Accessbot?text=Hello%20I%20want%20details%20for%20NNL%20C%2B%20PLATINUM" target="_blank">Contact on Telegram →</a></div></div>
-
-<div class="course" data-name="Combo" data-cat="OTHER"><div class="cover purple"><small>COMBO</small><h3>Combo</h3></div><div class="coursebody"><p>Multiple resources in one package.</p><a class="contact" href="https://t.me/Medicos_Accessbot?text=Hello%20I%20want%20details%20for%20Combo" target="_blank">Contact on Telegram →</a></div></div>
-
-<div class="course" data-name="TNC Advance Unique Batch" data-cat="OTHER"><div class="cover"><small>TNC</small><h3>TNC Advance Unique Batch</h3></div><div class="coursebody"><p>Advanced preparation batch.</p><a class="contact" href="https://t.me/Medicos_Accessbot?text=Hello%20I%20want%20details%20for%20TNC%20Advance%20Unique%20Batch" target="_blank">Contact on Telegram →</a></div></div>
-
-<div class="course" data-name="NPREP ALL BATCH" data-cat="OTHER"><div class="cover green"><small>NPREP</small><h3>NPREP ALL BATCH</h3></div><div class="coursebody"><p>Complete preparation batch.</p><a class="contact" href="https://t.me/Medicos_Accessbot?text=Hello%20I%20want%20details%20for%20NPREP%20ALL%20BATCH" target="_blank">Contact on Telegram →</a></div></div>
-
-<div class="course" data-name="E5 E4 E3 Edition" data-cat="NORCET"><div class="cover purple"><small>NORCET</small><h3>E5, E4, E3 Edition</h3></div><div class="coursebody"><p>For NORCET 11 and 12 preparation.</p><a class="contact" href="https://t.me/Medicos_Accessbot?text=Hello%20I%20want%20details%20for%20E5%20E4%20E3%20Edition" target="_blank">Contact on Telegram →</a></div></div>
-
-<div class="course" data-name="UTKARSH ALL BATCH" data-cat="OTHER"><div class="cover"><small>UTKARSH</small><h3>UTKARSH ALL BATCH</h3></div><div class="coursebody"><p>Complete batch collection.</p><a class="contact" href="https://t.me/Medicos_Accessbot?text=Hello%20I%20want%20details%20for%20UTKARSH%20ALL%20BATCH" target="_blank">Contact on Telegram →</a></div></div>
-
-<div class="course" data-name="PW NORCET BATCH" data-cat="NORCET"><div class="cover green"><small>PW</small><h3>PW NORCET BATCH</h3></div><div class="coursebody"><p>NORCET preparation batch.</p><a class="contact" href="https://t.me/Medicos_Accessbot?text=Hello%20I%20want%20details%20for%20PW%20NORCET%20BATCH" target="_blank">Contact on Telegram →</a></div></div>
-
-<div class="course" data-name="CONCEPT RNA" data-cat="OTHER"><div class="cover purple"><small>RNA</small><h3>CONCEPT RNA</h3></div><div class="coursebody"><p>Concept-focused preparation.</p><a class="contact" href="https://t.me/Medicos_Accessbot?text=Hello%20I%20want%20details%20for%20CONCEPT%20RNA" target="_blank">Contact on Telegram →</a></div></div>
-
-</div></div></section>
-
-<section><div class="wrap activity">
-<div class="box"><div class="title"><h3>Recent Activity</h3><a href="#courses">VIEW COURSES</a></div>
-<div class="row"><div class="rowico">📖</div><div><b>Medical Preparation</b><small>Continue learning • Today</small></div></div>
-<div class="row"><div class="rowico">📝</div><div><b>Practice Tests</b><small>Keep improving • Yesterday</small></div></div>
-<div class="row"><div class="rowico">🎯</div><div><b>NORCET Hub</b><small>Exam preparation • Recently</small></div></div>
-</div>
-<div class="botcard"><div><small>SMART STUDY ASSISTANT</small><h2>Study Bot 🤖</h2><p>Course details and access through Telegram.</p><a class="btn white" href="https://t.me/Medicos_Accessbot" target="_blank">Open Bot →</a></div></div>
-</div></section>
-
-<section id="bot"><div class="wrap"><div class="botcard">
-<div><small>MEDICOS-ACCESS BOT</small><h2>Your Digital Study Assistant</h2><p>Need a course? Select any paid course above and contact the bot directly.</p></div>
-<a class="btn white" href="https://t.me/Medicos_Accessbot" target="_blank">Contact @Medicos_Accessbot →</a>
-</div></div></section>
-
-<footer>⚕ <b>MEDICOS-<span>ACCESS</span></b><p>Learn. Practice. Succeed. • © 2026</p></footer>
-
-<div class="bottom"><a href="#home"><b>⌂</b>Home</a><a href="#study"><b>📚</b>Study</a><a href="#courses"><b>💎</b>Courses</a><a href="#exam"><b>🎯</b>Exam</a><a href="https://t.me/Medicos_Accessbot" target="_blank"><b>🤖</b>Bot</a></div>
 
 <script>
-function filterCourses(){let q=document.getElementById("search").value.toLowerCase(),c=document.getElementById("filter").value;document.querySelectorAll(".course").forEach(x=>{let n=x.dataset.name.toLowerCase(),g=x.dataset.cat;x.style.display=(n.includes(q)&&(c=="all"||g==c))?"block":"none"})}
+const modal=document.getElementById("courseModal");
+const modalTitle=document.getElementById("modalTitle");
+const modalDesc=document.getElementById("modalDesc");
+const modalBot=document.getElementById("modalBot");
+
+function openCourse(btn){
+  const card=btn.closest(".course");
+  const name=card.dataset.course;
+  const desc=card.dataset.desc;
+
+  modalTitle.textContent=name;
+  modalDesc.textContent=desc;
+
+  modalBot.href=
+    "https://t.me/Medicos_Accessbot?text="+
+    encodeURIComponent("Hello, I want information about: "+name);
+
+  modal.classList.add("show");
+  document.body.style.overflow="hidden";
+}
+
+function closeCourse(){
+  modal.classList.remove("show");
+  document.body.style.overflow="";
+}
+
+modal.addEventListener("click",function(e){
+  if(e.target===modal) closeCourse();
+});
+
+document.addEventListener("keydown",function(e){
+  if(e.key==="Escape") closeCourse();
+});
+
+const search=document.getElementById("search");
+const filter=document.getElementById("filter");
+const cards=[...document.querySelectorAll(".course")];
+
+function filterCourses(){
+  const text=search.value.toLowerCase().trim();
+  const cat=filter.value;
+
+  cards.forEach(card=>{
+    const name=card.dataset.course.toLowerCase();
+    const category=card.dataset.cat;
+
+    const matchText=name.includes(text);
+    const matchCat=cat==="all" || category===cat;
+
+    card.style.display=(matchText && matchCat)?"block":"none";
+  });
+}
+
+search.addEventListener("input",filterCourses);
+filter.addEventListener("change",filterCourses);
 </script>
+
 </body>
 </html>
