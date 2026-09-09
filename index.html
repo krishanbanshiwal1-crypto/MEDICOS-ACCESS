@@ -2,16 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>MEDICOS-ACCESS | Nursing & NORCET Preparation</title>
+<title>MEDICOS-ACCESS</title>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --bg:#050914;
+    --card:#0c1220;
+    --card2:#101827;
+    --text:#f5f9ff;
+    --muted:#8290a5;
+    --cyan:#4de7ff;
+    --blue:#438cff;
+    --green:#35e6a2;
+    --border:rgba(255,255,255,.08);
+    --shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:'Inter',sans-serif;
+    -webkit-tap-highlight-color:transparent;
 }
 
 html{
@@ -19,126 +35,39 @@ html{
 }
 
 body{
-    background:#07111f;
-    color:#fff;
-    line-height:1.6;
+    background:
+        radial-gradient(circle at 15% 5%,rgba(67,140,255,.15),transparent 28%),
+        radial-gradient(circle at 85% 15%,rgba(77,231,255,.10),transparent 25%),
+        var(--bg);
+    color:var(--text);
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+body:before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background-image:
+        linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);
+    background-size:45px 45px;
+    mask-image:linear-gradient(to bottom,#000,transparent 80%);
 }
 
 a{
-    text-decoration:none;
     color:inherit;
+    text-decoration:none;
 }
 
-.navbar{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(7,17,31,.92);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid rgba(255,255,255,.1);
-    padding:15px 5%;
-}
-
-.nav-inner{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo{
-    font-size:22px;
-    font-weight:800;
-    color:#55e6ff;
-}
-
-.nav-links{
-    display:flex;
-    gap:22px;
-    align-items:center;
-}
-
-.nav-links a{
-    color:#d8e5f2;
-    font-size:14px;
-}
-
-.nav-links a:hover{
-    color:#55e6ff;
-}
-
-.bot-btn{
-    background:#55e6ff;
-    color:#06111d !important;
-    padding:10px 16px;
-    border-radius:10px;
-    font-weight:700;
-}
-
-.hero{
-    padding:90px 5% 70px;
-    text-align:center;
-    background:
-    radial-gradient(circle at top,#123b5a 0%,transparent 45%),
-    #07111f;
-}
-
-.badge{
-    display:inline-block;
-    padding:8px 14px;
-    border:1px solid rgba(85,230,255,.35);
-    border-radius:30px;
-    color:#55e6ff;
-    margin-bottom:20px;
-    font-size:13px;
-}
-
-.hero h1{
-    font-size:clamp(38px,7vw,75px);
-    line-height:1.05;
-    margin-bottom:20px;
-}
-
-.hero h1 span{
-    color:#55e6ff;
-}
-
-.hero p{
-    max-width:700px;
-    margin:auto;
-    color:#aebdca;
-    font-size:17px;
-}
-
-.hero-buttons{
-    margin-top:30px;
-    display:flex;
-    justify-content:center;
-    gap:14px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-    padding:13px 20px;
-    border-radius:12px;
-    background:#55e6ff;
-    color:#06111d;
-    font-weight:700;
-    border:none;
-    cursor:pointer;
-}
-
-.btn.secondary{
-    background:rgba(255,255,255,.08);
-    color:#fff;
-    border:1px solid rgba(255,255,255,.12);
+button,
+input{
+    font:inherit;
 }
 
 .container{
-    width:90%;
-    max-width:1200px;
+    width:min(94%,1180px);
     margin:auto;
 }
 
@@ -146,263 +75,761 @@ section{
     padding:70px 0;
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:40px;
+.glass{
+    background:rgba(12,18,32,.72);
+    backdrop-filter:blur(20px);
+    border:1px solid var(--border);
+    box-shadow:var(--shadow);
 }
 
-.section-title h2{
-    font-size:34px;
-    margin-bottom:8px;
+/* TOP BAR */
+
+.topbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    padding:12px 4%;
+    background:rgba(5,9,20,.78);
+    backdrop-filter:blur(22px);
+    border-bottom:1px solid var(--border);
 }
 
-.section-title p{
-    color:#93a5b7;
+.topbar-inner{
+    max-width:1180px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:11px;
+}
+
+.brand-logo{
+    width:42px;
+    height:42px;
+    border-radius:14px;
+    display:grid;
+    place-items:center;
+    font-size:21px;
+    background:linear-gradient(135deg,var(--cyan),var(--blue));
+    color:#03101b;
+    box-shadow:0 0 30px rgba(77,231,255,.25);
+}
+
+.brand-name{
+    font-size:15px;
+    font-weight:800;
+    letter-spacing:.4px;
+}
+
+.brand-name small{
+    display:block;
+    color:var(--muted);
+    font-size:9px;
+    font-weight:500;
+    letter-spacing:1.5px;
+    margin-top:1px;
+}
+
+.top-actions{
+    display:flex;
+    align-items:center;
+    gap:9px;
+}
+
+.icon-btn{
+    width:42px;
+    height:42px;
+    border-radius:13px;
+    display:grid;
+    place-items:center;
+    background:rgba(255,255,255,.055);
+    border:1px solid var(--border);
+    cursor:pointer;
+    font-size:17px;
+}
+
+.bot-small{
+    background:linear-gradient(135deg,var(--cyan),var(--blue));
+    color:#03101b;
+    border:0;
+    font-weight:800;
+}
+
+/* HERO */
+
+.hero{
+    padding:55px 0 35px;
+    position:relative;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.25fr .75fr;
+    gap:35px;
+    align-items:center;
+}
+
+.status{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 13px;
+    border-radius:30px;
+    background:rgba(53,230,162,.07);
+    border:1px solid rgba(53,230,162,.18);
+    color:var(--green);
+    font-size:11px;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.status i{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--green);
+    box-shadow:0 0 12px var(--green);
+}
+
+.hero h1{
+    font-size:clamp(38px,6vw,72px);
+    line-height:.98;
+    letter-spacing:-3px;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    background:linear-gradient(100deg,var(--cyan),#70a5ff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero-text{
+    color:var(--muted);
+    max-width:620px;
+    font-size:15px;
+    line-height:1.8;
+}
+
+.hero-actions{
+    display:flex;
+    gap:11px;
+    flex-wrap:wrap;
+    margin-top:27px;
+}
+
+.btn{
+    border:0;
+    border-radius:14px;
+    padding:13px 18px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    cursor:pointer;
+    font-size:13px;
+    font-weight:800;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-primary{
+    color:#03101b;
+    background:linear-gradient(135deg,var(--cyan),var(--blue));
+    box-shadow:0 12px 30px rgba(67,140,255,.22);
+}
+
+.btn-dark{
+    background:rgba(255,255,255,.055);
+    border:1px solid var(--border);
+    color:#fff;
+}
+
+.hero-card{
+    position:relative;
+    min-height:330px;
+    border-radius:30px;
+    overflow:hidden;
+    padding:25px;
+    background:
+        radial-gradient(circle at 80% 20%,rgba(77,231,255,.18),transparent 30%),
+        linear-gradient(145deg,#101c30,#080e19);
+    border:1px solid rgba(77,231,255,.12);
+    box-shadow:var(--shadow);
+}
+
+.med-orbit{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:1px solid rgba(77,231,255,.2);
+    position:absolute;
+    right:25px;
+    top:35px;
+    display:grid;
+    place-items:center;
+    animation:float 5s ease-in-out infinite;
+}
+
+.med-orbit:before,
+.med-orbit:after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    border:1px solid rgba(67,140,255,.16);
+}
+
+.med-orbit:before{
+    width:135px;
+    height:135px;
+}
+
+.med-orbit:after{
+    width:230px;
+    height:230px;
+}
+
+.med-cross{
+    width:76px;
+    height:76px;
+    border-radius:25px;
+    display:grid;
+    place-items:center;
+    background:linear-gradient(135deg,var(--cyan),var(--blue));
+    color:#06101c;
+    font-size:37px;
+    font-weight:800;
+    box-shadow:0 0 45px rgba(77,231,255,.3);
+}
+
+.dashboard-mini{
+    position:absolute;
+    left:22px;
+    bottom:22px;
+    width:calc(100% - 44px);
+    border-radius:19px;
+    padding:17px;
+    background:rgba(255,255,255,.055);
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.dashboard-mini p{
+    color:var(--muted);
+    font-size:10px;
+}
+
+.dashboard-mini h3{
+    margin:4px 0 10px;
+    font-size:18px;
+}
+
+.progress{
+    height:7px;
+    border-radius:20px;
+    background:#172337;
+    overflow:hidden;
+}
+
+.progress span{
+    display:block;
+    width:78%;
+    height:100%;
+    border-radius:20px;
+    background:linear-gradient(90deg,var(--cyan),var(--blue));
+}
+
+/* STATS */
 
 .stats{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:18px;
-    margin-top:-20px;
+    gap:12px;
 }
 
 .stat{
-    background:rgba(255,255,255,.055);
-    border:1px solid rgba(255,255,255,.09);
-    border-radius:18px;
-    padding:25px;
-    text-align:center;
+    padding:20px;
+    border-radius:19px;
+    background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.025));
+    border:1px solid var(--border);
+}
+
+.stat-icon{
+    font-size:18px;
+    margin-bottom:13px;
 }
 
 .stat h3{
-    color:#55e6ff;
-    font-size:30px;
+    font-size:24px;
+    letter-spacing:-1px;
 }
 
 .stat p{
-    color:#9daebe;
+    color:var(--muted);
+    font-size:11px;
+    margin-top:3px;
 }
+
+/* SECTION TITLE */
+
+.section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin-bottom:25px;
+}
+
+.section-title h2{
+    font-size:29px;
+    letter-spacing:-1px;
+}
+
+.section-title p{
+    color:var(--muted);
+    font-size:12px;
+    margin-top:5px;
+}
+
+.view-all{
+    color:var(--cyan);
+    font-size:11px;
+    font-weight:700;
+}
+
+/* FEATURES */
 
 .features{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:18px;
+    gap:13px;
 }
 
-.feature-card{
-    background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
-    border:1px solid rgba(255,255,255,.1);
-    padding:25px;
-    border-radius:20px;
+.feature{
+    min-height:155px;
+    padding:20px;
+    border-radius:22px;
+    position:relative;
+    overflow:hidden;
     cursor:pointer;
-    transition:.25s;
+    transition:.3s;
+    background:linear-gradient(145deg,#101a2b,#0a111e);
+    border:1px solid var(--border);
 }
 
-.feature-card:hover{
+.feature:hover{
     transform:translateY(-5px);
-    border-color:#55e6ff;
+    border-color:rgba(77,231,255,.35);
+}
+
+.feature:after{
+    content:"";
+    position:absolute;
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    right:-40px;
+    bottom:-45px;
+    background:rgba(77,231,255,.07);
 }
 
 .feature-icon{
-    font-size:30px;
-    margin-bottom:12px;
+    width:44px;
+    height:44px;
+    border-radius:14px;
+    display:grid;
+    place-items:center;
+    background:rgba(77,231,255,.08);
+    border:1px solid rgba(77,231,255,.12);
+    font-size:21px;
+    margin-bottom:20px;
 }
 
-.feature-card h3{
-    margin-bottom:8px;
-}
-
-.feature-card p{
-    color:#9eafbf;
+.feature h3{
     font-size:14px;
 }
 
-.norcet{
-    background:linear-gradient(135deg,#0b2035,#07111f);
+.feature p{
+    color:var(--muted);
+    font-size:10px;
+    margin-top:5px;
+    line-height:1.5;
 }
 
-.norcet-box{
-    border:1px solid rgba(85,230,255,.25);
-    border-radius:25px;
-    padding:40px;
-    text-align:center;
-    background:rgba(85,230,255,.04);
+/* NORCET */
+
+.norcet-card{
+    border-radius:28px;
+    padding:35px;
+    position:relative;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 85% 50%,rgba(77,231,255,.13),transparent 30%),
+        linear-gradient(135deg,#0e1c31,#080f1b);
+    border:1px solid rgba(77,231,255,.13);
 }
 
-.norcet-box h2{
-    font-size:36px;
-    color:#55e6ff;
-    margin-bottom:12px;
+.norcet-card:before{
+    content:"NORCET";
+    position:absolute;
+    right:-10px;
+    bottom:-35px;
+    font-size:110px;
+    font-weight:900;
+    color:rgba(255,255,255,.025);
 }
 
-.norcet-box p{
-    color:#aebdca;
-    max-width:700px;
-    margin:0 auto 25px;
+.norcet-label{
+    color:var(--cyan);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2px;
 }
 
-.controls{
+.norcet-card h2{
+    font-size:34px;
+    letter-spacing:-1px;
+    margin:7px 0 10px;
+}
+
+.norcet-card p{
+    color:var(--muted);
+    max-width:650px;
+    font-size:13px;
+}
+
+.norcet-card .btn{
+    margin-top:22px;
+}
+
+/* COURSES */
+
+.course-tools{
     display:flex;
-    gap:12px;
-    justify-content:center;
-    flex-wrap:wrap;
-    margin-bottom:30px;
+    gap:10px;
+    margin-bottom:22px;
+}
+
+.search-wrap{
+    flex:1;
+    position:relative;
+}
+
+.search-wrap span{
+    position:absolute;
+    left:15px;
+    top:13px;
 }
 
 .search{
     width:100%;
-    max-width:450px;
-    padding:14px 18px;
-    border-radius:12px;
-    border:1px solid rgba(255,255,255,.12);
-    background:#0d1b2b;
+    height:45px;
+    border-radius:14px;
+    outline:0;
+    padding:0 15px 0 42px;
+    background:#0b1321;
     color:#fff;
-    outline:none;
+    border:1px solid var(--border);
 }
 
-.filter{
-    padding:12px 18px;
-    border-radius:10px;
-    background:#102337;
-    border:1px solid rgba(255,255,255,.1);
+.search:focus{
+    border-color:rgba(77,231,255,.4);
+}
+
+.all-btn{
+    height:45px;
+    border:1px solid var(--border);
+    background:#0b1321;
     color:#fff;
+    padding:0 16px;
+    border-radius:14px;
     cursor:pointer;
 }
 
 .courses{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    gap:14px;
 }
 
 .course{
-    background:linear-gradient(145deg,#0e2032,#091522);
-    border:1px solid rgba(255,255,255,.09);
-    border-radius:20px;
-    padding:24px;
-    transition:.25s;
+    padding:20px;
+    border-radius:22px;
+    background:linear-gradient(145deg,#101a2a,#0a111c);
+    border:1px solid var(--border);
+    transition:.3s;
+    position:relative;
 }
 
 .course:hover{
-    transform:translateY(-5px);
-    border-color:#55e6ff;
+    transform:translateY(-4px);
+    border-color:rgba(77,231,255,.3);
+}
+
+.course-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:16px;
 }
 
 .course-tag{
-    color:#55e6ff;
-    font-size:12px;
-    font-weight:bold;
-    margin-bottom:10px;
+    padding:5px 8px;
+    border-radius:7px;
+    background:rgba(77,231,255,.08);
+    color:var(--cyan);
+    font-size:8px;
+    font-weight:800;
+    letter-spacing:.5px;
+}
+
+.course-number{
+    color:#45536a;
+    font-size:11px;
+    font-weight:700;
 }
 
 .course h3{
-    margin-bottom:10px;
+    font-size:15px;
+    line-height:1.35;
+    min-height:41px;
 }
 
 .course p{
-    color:#9eafbf;
-    font-size:14px;
-    min-height:48px;
+    color:var(--muted);
+    font-size:10px;
+    line-height:1.5;
+    min-height:32px;
+    margin-top:8px;
 }
 
-.course .btn{
-    margin-top:18px;
+.course-btn{
     width:100%;
-    text-align:center;
+    margin-top:17px;
+    height:40px;
+    border-radius:11px;
+    border:1px solid rgba(77,231,255,.12);
+    background:rgba(77,231,255,.06);
+    color:var(--cyan);
+    cursor:pointer;
+    font-size:11px;
+    font-weight:800;
 }
+
+/* ACTIVITY */
 
 .activity{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:18px;
+    gap:13px;
 }
 
 .activity-card{
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:18px;
-    padding:25px;
+    padding:22px;
+    border-radius:20px;
+    background:linear-gradient(145deg,#101a2b,#0a111e);
+    border:1px solid var(--border);
+}
+
+.activity-icon{
+    font-size:23px;
+    margin-bottom:15px;
+}
+
+.activity-card h3{
+    font-size:14px;
 }
 
 .activity-card p{
-    color:#9eafbf;
+    color:var(--muted);
+    font-size:11px;
+    margin-top:6px;
+    line-height:1.6;
+}
+
+/* CONTACT */
+
+.contact{
+    padding-bottom:100px;
 }
 
 .contact-box{
+    border-radius:28px;
+    padding:45px 25px;
     text-align:center;
-    padding:50px 25px;
-    border-radius:25px;
-    background:linear-gradient(135deg,#102d46,#0a1929);
-    border:1px solid rgba(85,230,255,.2);
+    background:
+        radial-gradient(circle at 50% 0,rgba(77,231,255,.12),transparent 45%),
+        #0b1422;
+    border:1px solid rgba(77,231,255,.13);
 }
 
 .contact-box h2{
-    font-size:36px;
-    margin-bottom:10px;
+    font-size:32px;
+    letter-spacing:-1px;
 }
 
 .contact-box p{
-    color:#aebdca;
-    margin-bottom:25px;
+    color:var(--muted);
+    font-size:12px;
+    margin:8px auto 23px;
+    max-width:500px;
 }
+
+.contact-actions{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+/* FOOTER */
 
 footer{
-    padding:30px 5%;
     text-align:center;
-    border-top:1px solid rgba(255,255,255,.08);
-    color:#718497;
+    color:#465469;
+    font-size:10px;
+    padding:25px 20px 100px;
+    border-top:1px solid var(--border);
 }
 
+/* MOBILE NAV */
+
 .mobile-nav{
-    display:none;
+    position:fixed;
+    z-index:1500;
+    bottom:10px;
+    left:3%;
+    right:3%;
+    height:66px;
+    border-radius:22px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    background:rgba(10,17,29,.92);
+    backdrop-filter:blur(25px);
+    border:1px solid rgba(255,255,255,.09);
+    box-shadow:0 15px 50px rgba(0,0,0,.5);
 }
+
+.mobile-nav a{
+    color:#6e7d92;
+    font-size:9px;
+    text-align:center;
+    min-width:50px;
+}
+
+.mobile-nav a.active,
+.mobile-nav a:hover{
+    color:var(--cyan);
+}
+
+.mobile-nav .nav-icon{
+    display:block;
+    font-size:18px;
+    margin-bottom:2px;
+}
+
+/* MODAL */
 
 .modal{
     display:none;
     position:fixed;
+    z-index:3000;
     inset:0;
-    z-index:2000;
-    background:rgba(0,0,0,.75);
-    align-items:center;
+    background:rgba(0,0,0,.72);
+    backdrop-filter:blur(8px);
+    align-items:flex-end;
     justify-content:center;
-    padding:20px;
 }
 
-.modal.active{
+.modal.show{
     display:flex;
 }
 
 .modal-box{
-    width:100%;
-    max-width:500px;
-    background:#0c1b2a;
-    border:1px solid rgba(85,230,255,.25);
-    border-radius:22px;
-    padding:30px;
-    position:relative;
+    width:min(100%,560px);
+    border-radius:28px 28px 0 0;
+    padding:27px;
+    background:#0b1422;
+    border:1px solid rgba(255,255,255,.09);
+    box-shadow:0 -20px 80px rgba(0,0,0,.5);
+    animation:slideUp .3s ease;
 }
 
-.close{
+.modal-handle{
+    width:42px;
+    height:4px;
+    border-radius:20px;
+    background:#334156;
+    margin:0 auto 22px;
+}
+
+.modal-close{
     position:absolute;
-    right:18px;
-    top:12px;
-    font-size:28px;
+    right:22px;
+    top:20px;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    border:1px solid var(--border);
+    background:#111c2c;
+    color:#fff;
     cursor:pointer;
-    color:#9eb0c0;
+}
+
+.modal-tag{
+    color:var(--cyan);
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:1px;
 }
 
 .modal-box h2{
-    color:#55e6ff;
-    margin-bottom:12px;
+    margin:8px 0;
+    font-size:24px;
 }
 
 .modal-box p{
-    color:#aebdca;
-    margin-bottom:22px;
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.7;
+    margin-bottom:20px;
 }
 
+.modal-box .btn{
+    width:100%;
+}
+
+/* ANIMATION */
+
+@keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-12px)}
+}
+
+@keyframes slideUp{
+    from{transform:translateY(100%)}
+    to{transform:translateY(0)}
+}
+
+/* RESPONSIVE */
+
 @media(max-width:900px){
+
+    .hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-card{
+        min-height:260px;
+    }
+
     .features{
         grid-template-columns:repeat(2,1fr);
     }
@@ -419,51 +846,146 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .nav-links{
-        display:none;
-    }
-
-    .mobile-nav{
-        position:fixed;
-        display:flex;
-        bottom:0;
-        left:0;
-        right:0;
-        z-index:1500;
-        background:rgba(7,17,31,.96);
-        border-top:1px solid rgba(255,255,255,.1);
-        justify-content:space-around;
-        padding:10px 5px;
-    }
-
-    .mobile-nav a{
-        font-size:11px;
-        color:#9eb0c0;
-        text-align:center;
+    .med-orbit{
+        right:30px;
     }
 }
 
+@media(min-width:901px){
+
+    .mobile-nav{
+        display:none;
+    }
+
+}
+
 @media(max-width:600px){
+
+    section{
+        padding:48px 0;
+    }
+
+    .topbar{
+        padding:10px 4%;
+    }
+
+    .brand-logo{
+        width:39px;
+        height:39px;
+    }
+
+    .bot-small{
+        width:auto;
+        padding:0 12px;
+        font-size:10px;
+    }
+
     .hero{
-        padding-top:65px;
+        padding-top:40px;
     }
 
-    .features,
-    .courses,
-    .stats{
-        grid-template-columns:1fr;
+    .hero h1{
+        font-size:43px;
+        letter-spacing:-2.5px;
     }
 
-    .norcet-box{
-        padding:28px 20px;
+    .hero-text{
+        font-size:13px;
     }
 
-    .section-title h2{
+    .hero-card{
+        min-height:235px;
+    }
+
+    .med-orbit{
+        width:135px;
+        height:135px;
+        right:18px;
+        top:20px;
+    }
+
+    .med-orbit:before{
+        width:100px;
+        height:100px;
+    }
+
+    .med-orbit:after{
+        width:175px;
+        height:175px;
+    }
+
+    .med-cross{
+        width:58px;
+        height:58px;
+        border-radius:18px;
         font-size:28px;
     }
 
-    body{
-        padding-bottom:60px;
+    .dashboard-mini{
+        left:15px;
+        bottom:15px;
+        width:calc(100% - 30px);
+    }
+
+    .stats{
+        gap:9px;
+    }
+
+    .stat{
+        padding:15px;
+    }
+
+    .stat h3{
+        font-size:20px;
+    }
+
+    .features{
+        gap:9px;
+    }
+
+    .feature{
+        min-height:145px;
+        padding:16px;
+    }
+
+    .feature-icon{
+        margin-bottom:15px;
+    }
+
+    .norcet-card{
+        padding:27px 20px;
+    }
+
+    .norcet-card h2{
+        font-size:27px;
+    }
+
+    .course-tools{
+        flex-direction:column;
+    }
+
+    .all-btn{
+        width:100%;
+    }
+
+    .courses{
+        grid-template-columns:1fr;
+    }
+
+    .course{
+        padding:18px;
+    }
+
+    .section-title h2{
+        font-size:25px;
+    }
+
+    .contact-box{
+        padding:35px 20px;
+    }
+
+    footer{
+        padding-bottom:95px;
     }
 }
 </style>
@@ -471,126 +993,219 @@ footer{
 
 <body>
 
-<header class="navbar">
-    <div class="nav-inner">
-        <a href="#home" class="logo">MEDICOS-ACCESS</a>
+<!-- TOP BAR -->
+<header class="topbar">
+    <div class="topbar-inner">
 
-        <nav class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#study">Study</a>
-            <a href="#norcet">NORCET</a>
-            <a href="#courses">Courses</a>
-            <a href="#contact">Contact</a>
+        <a href="#home" class="brand">
+            <div class="brand-logo">⚕</div>
+            <div class="brand-name">
+                MEDICOS-ACCESS
+                <small>NURSING • NORCET PREPARATION</small>
+            </div>
+        </a>
 
-            <a href="https://t.me/Medicos_Accessbot"
-               target="_blank"
-               class="bot-btn">
-               🤖 Study Bot
-            </a>
-        </nav>
-    </div>
-</header>
-
-<!-- HERO -->
-<section class="hero" id="home">
-    <div class="container">
-
-        <div class="badge">🩺 Nursing • NORCET • Medical Preparation</div>
-
-        <h1>
-            Study Smarter With<br>
-            <span>MEDICOS-ACCESS</span>
-        </h1>
-
-        <p>
-            Your complete preparation platform for nursing students
-            and NORCET aspirants — study material, PYQs, test series
-            and premium courses in one place.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="https://t.me/Medicos_Accessbot"
-               target="_blank"
-               class="btn">
-               🤖 Open Study Bot
-            </a>
+        <div class="top-actions">
 
             <a href="https://whatsapp.com/channel/0029VbDbCHv9Gv7UTFIrVa1l"
                target="_blank"
-               class="btn secondary">
-               🟢 WhatsApp Channel
+               class="icon-btn">🟢</a>
+
+            <a href="https://t.me/Medicos_Accessbot"
+               target="_blank"
+               class="icon-btn bot-small">
+               🤖
             </a>
 
         </div>
     </div>
-</section>
+</header>
 
-<!-- STATS -->
-<div class="container">
-    <div class="stats">
 
-        <div class="stat">
-            <h3>12+</h3>
-            <p>Premium Courses</p>
-        </div>
+<!-- HERO -->
+<section class="hero" id="home">
 
-        <div class="stat">
-            <h3>24/7</h3>
-            <p>Study Access</p>
-        </div>
+    <div class="container">
 
-        <div class="stat">
-            <h3>100%</h3>
-            <p>Focused Preparation</p>
-        </div>
+        <div class="hero-grid">
 
-        <div class="stat">
-            <h3>1</h3>
-            <p>Study Platform</p>
+            <div>
+
+                <div class="status">
+                    <i></i>
+                    PREMIUM STUDY PLATFORM
+                </div>
+
+                <h1>
+                    Your Nursing<br>
+                    <span>Success Hub.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Study smarter with premium nursing resources,
+                    NORCET preparation, PYQs, notes and test series —
+                    all in one powerful platform.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="https://t.me/Medicos_Accessbot"
+                       target="_blank"
+                       class="btn btn-primary">
+                       🤖 Open Study Bot
+                    </a>
+
+                    <a href="#courses"
+                       class="btn btn-dark">
+                       💎 Explore Courses
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="med-orbit">
+                    <div class="med-cross">+</div>
+                </div>
+
+                <div class="dashboard-mini">
+
+                    <p>YOUR PREPARATION</p>
+
+                    <h3>Stay Consistent 🚀</h3>
+
+                    <div class="progress">
+                        <span></span>
+                    </div>
+
+                    <p style="margin-top:8px;">
+                        Keep learning • Keep improving
+                    </p>
+
+                </div>
+
+            </div>
+
         </div>
 
     </div>
-</div>
+
+</section>
+
+
+<!-- STATS -->
+<section style="padding-top:20px;">
+
+    <div class="container">
+
+        <div class="stats">
+
+            <div class="stat">
+                <div class="stat-icon">💎</div>
+                <h3>12+</h3>
+                <p>Premium Courses</p>
+            </div>
+
+            <div class="stat">
+                <div class="stat-icon">📚</div>
+                <h3>24/7</h3>
+                <p>Study Access</p>
+            </div>
+
+            <div class="stat">
+                <div class="stat-icon">🎯</div>
+                <h3>NORCET</h3>
+                <p>Focused Prep</p>
+            </div>
+
+            <div class="stat">
+                <div class="stat-icon">⚡</div>
+                <h3>1</h3>
+                <p>Study Platform</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 
 <!-- STUDY -->
 <section id="study">
 
     <div class="container">
 
-        <div class="section-title">
-            <h2>Study Ecosystem</h2>
-            <p>Everything you need for your preparation.</p>
+        <div class="section-head">
+
+            <div class="section-title">
+                <h2>Study Hub</h2>
+                <p>Your essential preparation resources.</p>
+            </div>
+
+            <span class="view-all">EXPLORE →</span>
+
         </div>
+
 
         <div class="features">
 
-            <div class="feature-card"
+            <div class="feature"
                  onclick="openBot('Notes')">
+
                 <div class="feature-icon">📚</div>
+
                 <h3>Notes</h3>
-                <p>Important nursing notes and preparation material.</p>
+
+                <p>
+                    Important nursing notes and study resources.
+                </p>
+
             </div>
 
-            <div class="feature-card"
+
+            <div class="feature"
                  onclick="openBot('PYQ')">
+
                 <div class="feature-icon">📝</div>
+
                 <h3>PYQ</h3>
-                <p>Previous year questions for better exam practice.</p>
+
+                <p>
+                    Previous year questions for exam practice.
+                </p>
+
             </div>
 
-            <div class="feature-card"
+
+            <div class="feature"
                  onclick="openBot('Test Series')">
+
                 <div class="feature-icon">🧪</div>
+
                 <h3>Test Series</h3>
-                <p>Practice tests to improve speed and accuracy.</p>
+
+                <p>
+                    Practice tests to improve speed and accuracy.
+                </p>
+
             </div>
 
-            <div class="feature-card"
+
+            <div class="feature"
                  onclick="openBot('Study Material')">
+
                 <div class="feature-icon">📖</div>
+
                 <h3>Study Material</h3>
-                <p>Useful resources for nursing and NORCET preparation.</p>
+
+                <p>
+                    Useful resources for nursing preparation.
+                </p>
+
             </div>
 
         </div>
@@ -599,21 +1214,27 @@ footer{
 
 </section>
 
+
 <!-- NORCET -->
-<section class="norcet" id="norcet">
+<section id="norcet">
 
     <div class="container">
 
-        <div class="norcet-box">
+        <div class="norcet-card">
 
-            <h2>🎯 NORCET Preparation Zone</h2>
+            <div class="norcet-label">
+                TARGET • PREPARE • CRACK
+            </div>
+
+            <h2>NORCET Preparation Zone 🎯</h2>
 
             <p>
-                Prepare for NORCET with focused study resources,
-                previous year questions, test series and premium batches.
+                Focused preparation resources for NORCET aspirants.
+                Access notes, PYQs, test series and premium batches
+                through Medicos_Access.
             </p>
 
-            <button class="btn"
+            <button class="btn btn-primary"
                     onclick="openBot('NORCET Preparation')">
                 🚀 Start NORCET Preparation
             </button>
@@ -624,117 +1245,310 @@ footer{
 
 </section>
 
+
 <!-- COURSES -->
 <section id="courses">
 
     <div class="container">
 
-        <div class="section-title">
-            <h2>💎 Premium Courses</h2>
-            <p>Choose your preparation course.</p>
+        <div class="section-head">
+
+            <div class="section-title">
+                <h2>Premium Courses 💎</h2>
+                <p>Choose your preparation path.</p>
+            </div>
+
         </div>
 
-        <div class="controls">
 
-            <input
-                type="text"
-                id="courseSearch"
-                class="search"
-                placeholder="🔍 Search course..."
-                onkeyup="filterCourses()"
-            >
+        <div class="course-tools">
 
-            <button class="filter"
+            <div class="search-wrap">
+
+                <span>🔍</span>
+
+                <input
+                    id="courseSearch"
+                    class="search"
+                    type="text"
+                    placeholder="Search course..."
+                    onkeyup="filterCourses()"
+                >
+
+            </div>
+
+            <button class="all-btn"
                     onclick="showAllCourses()">
                 All Courses
             </button>
 
         </div>
 
+
         <div class="courses" id="courseList">
 
+
+            <!-- 01 -->
             <div class="course">
-                <div class="course-tag">PREMIUM</div>
+
+                <div class="course-top">
+                    <span class="course-tag">PREMIUM</span>
+                    <span class="course-number">01</span>
+                </div>
+
                 <h3>NNL C+ X Ed</h3>
-                <p>Complete preparation batch for nursing aspirants.</p>
-                <button class="btn" onclick="courseInfo('NNL C+ X Ed')">View Course</button>
+
+                <p>
+                    Complete preparation batch for nursing aspirants.
+                </p>
+
+                <button class="course-btn"
+                        onclick="courseInfo('NNL C+ X Ed')">
+                    VIEW COURSE →
+                </button>
+
             </div>
 
+
+            <!-- 02 -->
             <div class="course">
-                <div class="course-tag">PREMIUM</div>
+
+                <div class="course-top">
+                    <span class="course-tag">PREMIUM</span>
+                    <span class="course-number">02</span>
+                </div>
+
                 <h3>NNL Fastrack 11</h3>
-                <p>Fast-track preparation for NORCET aspirants.</p>
-                <button class="btn" onclick="courseInfo('NNL Fastrack 11')">View Course</button>
+
+                <p>
+                    Fast-track preparation for NORCET aspirants.
+                </p>
+
+                <button class="course-btn"
+                        onclick="courseInfo('NNL Fastrack 11')">
+                    VIEW COURSE →
+                </button>
+
             </div>
 
+
+            <!-- 03 -->
             <div class="course">
-                <div class="course-tag">PREMIUM</div>
+
+                <div class="course-top">
+                    <span class="course-tag">EXPRESS</span>
+                    <span class="course-number">03</span>
+                </div>
+
                 <h3>Z to F Express Batch</h3>
-                <p>Focused express preparation batch.</p>
-                <button class="btn" onclick="courseInfo('Z to F Express Batch')">View Course</button>
+
+                <p>
+                    Focused express preparation batch.
+                </p>
+
+                <button class="course-btn"
+                        onclick="courseInfo('Z to F Express Batch')">
+                    VIEW COURSE →
+                </button>
+
             </div>
 
+
+            <!-- 04 -->
             <div class="course">
-                <div class="course-tag">TEST SERIES</div>
+
+                <div class="course-top">
+                    <span class="course-tag">TEST SERIES</span>
+                    <span class="course-number">04</span>
+                </div>
+
                 <h3>NNL Test Series Strike</h3>
-                <p>Practice-oriented test series for exam preparation.</p>
-                <button class="btn" onclick="courseInfo('NNL Test Series Strike')">View Course</button>
+
+                <p>
+                    Practice-oriented test series.
+                </p>
+
+                <button class="course-btn"
+                        onclick="courseInfo('NNL Test Series Strike')">
+                    VIEW COURSE →
+                </button>
+
             </div>
 
+
+            <!-- 05 -->
             <div class="course">
-                <div class="course-tag">PREMIUM</div>
+
+                <div class="course-top">
+                    <span class="course-tag">PLATINUM</span>
+                    <span class="course-number">05</span>
+                </div>
+
                 <h3>NNL C+ PLATINUM</h3>
-                <p>Premium nursing preparation course.</p>
-                <button class="btn" onclick="courseInfo('NNL C+ PLATINUM')">View Course</button>
+
+                <p>
+                    Premium nursing preparation course.
+                </p>
+
+                <button class="course-btn"
+                        onclick="courseInfo('NNL C+ PLATINUM')">
+                    VIEW COURSE →
+                </button>
+
             </div>
 
+
+            <!-- 06 -->
             <div class="course">
-                <div class="course-tag">COMBO</div>
+
+                <div class="course-top">
+                    <span class="course-tag">COMBO</span>
+                    <span class="course-number">06</span>
+                </div>
+
                 <h3>Combo</h3>
-                <p>Multiple preparation resources in one combo.</p>
-                <button class="btn" onclick="courseInfo('Combo')">View Course</button>
+
+                <p>
+                    Multiple preparation resources in one combo.
+                </p>
+
+                <button class="course-btn"
+                        onclick="courseInfo('Combo')">
+                    VIEW COURSE →
+                </button>
+
             </div>
 
+
+            <!-- 07 -->
             <div class="course">
-                <div class="course-tag">PREMIUM</div>
+
+                <div class="course-top">
+                    <span class="course-tag">ADVANCED</span>
+                    <span class="course-number">07</span>
+                </div>
+
                 <h3>TNC Advance Unique Batch</h3>
-                <p>Advanced preparation resources.</p>
-                <button class="btn" onclick="courseInfo('TNC Advance Unique Batch')">View Course</button>
+
+                <p>
+                    Advanced preparation resources.
+                </p>
+
+                <button class="course-btn"
+                        onclick="courseInfo('TNC Advance Unique Batch')">
+                    VIEW COURSE →
+                </button>
+
             </div>
 
+
+            <!-- 08 -->
             <div class="course">
-                <div class="course-tag">PREMIUM</div>
+
+                <div class="course-top">
+                    <span class="course-tag">ALL BATCH</span>
+                    <span class="course-number">08</span>
+                </div>
+
                 <h3>NPREP ALL BATCH</h3>
-                <p>Complete batch collection for nursing preparation.</p>
-                <button class="btn" onclick="courseInfo('NPREP ALL BATCH')">View Course</button>
+
+                <p>
+                    Complete batch collection.
+                </p>
+
+                <button class="course-btn"
+                        onclick="courseInfo('NPREP ALL BATCH')">
+                    VIEW COURSE →
+                </button>
+
             </div>
 
+
+            <!-- 09 -->
             <div class="course">
-                <div class="course-tag">NORCET 11 & 12</div>
+
+                <div class="course-top">
+                    <span class="course-tag">NORCET 11 & 12</span>
+                    <span class="course-number">09</span>
+                </div>
+
                 <h3>E5, E4, E3 Edition</h3>
-                <p>Preparation editions for upcoming NORCET exams.</p>
-                <button class="btn" onclick="courseInfo('E5, E4, E3 Edition')">View Course</button>
+
+                <p>
+                    Preparation editions for NORCET exams.
+                </p>
+
+                <button class="course-btn"
+                        onclick="courseInfo('E5, E4, E3 Edition')">
+                    VIEW COURSE →
+                </button>
+
             </div>
 
+
+            <!-- 10 -->
             <div class="course">
-                <div class="course-tag">PREMIUM</div>
+
+                <div class="course-top">
+                    <span class="course-tag">PREMIUM</span>
+                    <span class="course-number">10</span>
+                </div>
+
                 <h3>UTKARSH ALL BATCH</h3>
-                <p>All-batch preparation resources.</p>
-                <button class="btn" onclick="courseInfo('UTKARSH ALL BATCH')">View Course</button>
+
+                <p>
+                    All-batch preparation resources.
+                </p>
+
+                <button class="course-btn"
+                        onclick="courseInfo('UTKARSH ALL BATCH')">
+                    VIEW COURSE →
+                </button>
+
             </div>
 
+
+            <!-- 11 -->
             <div class="course">
-                <div class="course-tag">NORCET</div>
+
+                <div class="course-top">
+                    <span class="course-tag">NORCET</span>
+                    <span class="course-number">11</span>
+                </div>
+
                 <h3>PW NORCET BATCH</h3>
-                <p>NORCET focused preparation batch.</p>
-                <button class="btn" onclick="courseInfo('PW NORCET BATCH')">View Course</button>
+
+                <p>
+                    NORCET focused preparation batch.
+                </p>
+
+                <button class="course-btn"
+                        onclick="courseInfo('PW NORCET BATCH')">
+                    VIEW COURSE →
+                </button>
+
             </div>
 
+
+            <!-- 12 -->
             <div class="course">
-                <div class="course-tag">PREMIUM</div>
+
+                <div class="course-top">
+                    <span class="course-tag">CONCEPT</span>
+                    <span class="course-number">12</span>
+                </div>
+
                 <h3>CONCEPT RNA</h3>
-                <p>Concept-focused preparation resources.</p>
-                <button class="btn" onclick="courseInfo('CONCEPT RNA')">View Course</button>
+
+                <p>
+                    Concept-focused preparation resources.
+                </p>
+
+                <button class="course-btn"
+                        onclick="courseInfo('CONCEPT RNA')">
+                    VIEW COURSE →
+                </button>
+
             </div>
 
         </div>
@@ -742,32 +1556,64 @@ footer{
     </div>
 
 </section>
+
 
 <!-- ACTIVITY -->
 <section>
 
     <div class="container">
 
-        <div class="section-title">
-            <h2>📈 Student Activity</h2>
-            <p>Keep your preparation consistent.</p>
+        <div class="section-head">
+
+            <div class="section-title">
+                <h2>Student Activity 📈</h2>
+                <p>Build consistency every day.</p>
+            </div>
+
         </div>
+
 
         <div class="activity">
 
             <div class="activity-card">
-                <h3>🔥 Daily Practice</h3>
-                <p>Stay consistent with regular questions and revision.</p>
+
+                <div class="activity-icon">🔥</div>
+
+                <h3>Daily Practice</h3>
+
+                <p>
+                    Stay consistent with regular questions,
+                    revision and practice.
+                </p>
+
             </div>
 
-            <div class="activity-card">
-                <h3>🎯 Exam Focus</h3>
-                <p>Prepare according to your target examination.</p>
-            </div>
 
             <div class="activity-card">
-                <h3>🚀 Smart Preparation</h3>
-                <p>Use notes, PYQs and tests to improve your performance.</p>
+
+                <div class="activity-icon">🎯</div>
+
+                <h3>Exam Focus</h3>
+
+                <p>
+                    Prepare according to your target
+                    examination.
+                </p>
+
+            </div>
+
+
+            <div class="activity-card">
+
+                <div class="activity-icon">🚀</div>
+
+                <h3>Smart Preparation</h3>
+
+                <p>
+                    Use notes, PYQs and tests to improve
+                    your performance.
+                </p>
+
             </div>
 
         </div>
@@ -776,8 +1622,9 @@ footer{
 
 </section>
 
+
 <!-- CONTACT -->
-<section id="contact">
+<section class="contact" id="contact">
 
     <div class="container">
 
@@ -790,18 +1637,18 @@ footer{
                 for course information and assistance.
             </p>
 
-            <div class="hero-buttons">
+            <div class="contact-actions">
 
                 <a href="https://t.me/Medicos_Accessbot"
                    target="_blank"
-                   class="btn">
-                   💬 Contact Me @Medicos_Access
+                   class="btn btn-primary">
+                    💬 Contact Me @Medicos_Access
                 </a>
 
                 <a href="https://whatsapp.com/channel/0029VbDbCHv9Gv7UTFIrVa1l"
                    target="_blank"
-                   class="btn secondary">
-                   🟢 Join WhatsApp Channel
+                   class="btn btn-dark">
+                    🟢 Join WhatsApp Channel
                 </a>
 
             </div>
@@ -812,17 +1659,56 @@ footer{
 
 </section>
 
-<!-- FOOTER -->
+
 <footer>
     © 2026 MEDICOS-ACCESS • Nursing & NORCET Preparation
 </footer>
+
+
+<!-- MOBILE NAV -->
+<nav class="mobile-nav">
+
+    <a href="#home" class="active">
+        <span class="nav-icon">⌂</span>
+        Home
+    </a>
+
+    <a href="#study">
+        <span class="nav-icon">📚</span>
+        Study
+    </a>
+
+    <a href="#norcet">
+        <span class="nav-icon">🎯</span>
+        NORCET
+    </a>
+
+    <a href="#courses">
+        <span class="nav-icon">💎</span>
+        Courses
+    </a>
+
+    <a href="#contact">
+        <span class="nav-icon">💬</span>
+        Contact
+    </a>
+
+</nav>
+
 
 <!-- COURSE MODAL -->
 <div class="modal" id="courseModal">
 
     <div class="modal-box">
 
-        <span class="close" onclick="closeModal()">×</span>
+        <div class="modal-handle"></div>
+
+        <button class="modal-close"
+                onclick="closeModal()">×</button>
+
+        <div class="modal-tag">
+            PREMIUM COURSE
+        </div>
 
         <h2 id="modalTitle">Course</h2>
 
@@ -834,114 +1720,157 @@ footer{
         <a id="modalBot"
            href="https://t.me/Medicos_Accessbot"
            target="_blank"
-           class="btn">
-           🤖 Get Course Information
+           class="btn btn-primary">
+            🤖 Get Course Information
         </a>
 
     </div>
 
 </div>
 
-<!-- MOBILE NAV -->
-<nav class="mobile-nav">
-
-    <a href="#home">🏠<br>Home</a>
-
-    <a href="#study">📚<br>Study</a>
-
-    <a href="#norcet">🎯<br>NORCET</a>
-
-    <a href="#courses">💎<br>Courses</a>
-
-    <a href="#contact">💬<br>Contact</a>
-
-</nav>
 
 <script>
 
-const MEDICOS_BOT = "https://t.me/Medicos_Accessbot";
+const MEDICOS_BOT =
+    "https://t.me/Medicos_Accessbot";
+
+
+/* BOT REDIRECT */
 
 function openBot(section){
 
     let url = MEDICOS_BOT;
 
     if(section){
-        url += "?text=" + encodeURIComponent(
-            "Hello Medicos_Access, I want information about: " + section
+
+        url += "?text=" +
+        encodeURIComponent(
+            "Hello Medicos_Access, I want information about: "
+            + section
         );
+
     }
 
     window.open(url,"_blank");
+
 }
+
+
+/* COURSE POPUP */
 
 function courseInfo(course){
 
-    document.getElementById("modalTitle").innerText = course;
+    document.getElementById("modalTitle")
+        .innerText = course;
 
     const botLink =
         MEDICOS_BOT +
         "?text=" +
         encodeURIComponent(
-            "Hello Medicos_Access, I want information about: " + course
+            "Hello Medicos_Access, I want information about: "
+            + course
         );
 
-    document.getElementById("modalBot").href = botLink;
+    document.getElementById("modalBot")
+        .href = botLink;
 
     document.getElementById("courseModal")
-        .classList.add("active");
+        .classList.add("show");
+
 }
+
 
 function closeModal(){
 
     document.getElementById("courseModal")
-        .classList.remove("active");
+        .classList.remove("show");
+
 }
 
-window.onclick = function(event){
 
-    const modal = document.getElementById("courseModal");
+document.getElementById("courseModal")
+.addEventListener("click",function(e){
 
-    if(event.target === modal){
+    if(e.target === this){
         closeModal();
     }
 
-}
+});
+
+
+/* COURSE SEARCH */
 
 function filterCourses(){
 
     const search =
         document.getElementById("courseSearch")
         .value
-        .toLowerCase();
+        .toLowerCase()
+        .trim();
 
-    const courses =
-        document.querySelectorAll(".course");
-
-    courses.forEach(function(course){
+    document.querySelectorAll(".course")
+    .forEach(function(course){
 
         const text =
             course.innerText.toLowerCase();
 
-        if(text.includes(search)){
-            course.style.display = "";
-        }else{
-            course.style.display = "none";
-        }
+        course.style.display =
+            text.includes(search)
+            ? ""
+            : "none";
 
     });
 
 }
 
+
 function showAllCourses(){
 
-    document.getElementById("courseSearch").value = "";
+    document.getElementById("courseSearch")
+        .value = "";
 
     document.querySelectorAll(".course")
-        .forEach(function(course){
-            course.style.display = "";
-        });
+    .forEach(function(course){
+
+        course.style.display = "";
+
+    });
 
 }
+
+
+/* ACTIVE MOBILE NAV */
+
+const navLinks =
+    document.querySelectorAll(".mobile-nav a");
+
+window.addEventListener("scroll",function(){
+
+    let current = "";
+
+    document.querySelectorAll("section[id]")
+    .forEach(function(section){
+
+        const top =
+            section.offsetTop - 180;
+
+        if(window.scrollY >= top){
+            current = section.id;
+        }
+
+    });
+
+    navLinks.forEach(function(link){
+
+        link.classList.remove("active");
+
+        if(link.getAttribute("href") === "#" + current){
+            link.classList.add("active");
+        }
+
+    });
+
+});
 
 </script>
 
