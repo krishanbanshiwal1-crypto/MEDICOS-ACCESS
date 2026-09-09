@@ -2,62 +2,28 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#071a33">
-<title>MEDICOS-ACCESS | Medical Learning Platform</title>
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MEDICOS-ACCESS</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;color:#16304d;background:#f7fbff}
-a{text-decoration:none}
-.container{width:92%;max-width:1150px;margin:auto}
-
-/* NAV */
-nav{
-position:fixed;top:0;width:100%;z-index:10;
-background:rgba(255,255,255,.92);backdrop-filter:blur(15px);
-border-bottom:1px solid #e4edf6;padding:14px 0
-}
-.nav{display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:20px;font-weight:900;color:#071a33}
-.logo span{color:#087cff}
-.logo-icon{
-display:inline-grid;place-items:center;width:38px;height:38px;
-margin-right:8px;border-radius:12px;color:white;
-background:linear-gradient(135deg,#087cff,#15c9ff)
-}
-.links{display:flex;gap:25px;align-items:center}
-.links a{color:#52677e;font-size:14px;font-weight:bold}
-.navbtn{background:#071a33!important;color:white!important;padding:11px 17px;border-radius:10px}
-
-/* HERO */
-.hero{
-padding:145px 0 90px;
-background:radial-gradient(circle at 85% 20%,#dff7ff,transparent 30%),
-linear-gradient(135deg,#fff,#edf7ff)
-}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.badge{
-display:inline-block;padding:8px 13px;border-radius:30px;
-background:#e5f4ff;color:#087cff;font-size:11px;font-weight:bold;
-margin-bottom:18px
-}
-h1{font-size:58px;line-height:1.03;color:#071a33;letter-spacing:-2px}
-h1 span{color:#087cff}
-.hero p{font-size:16px;color:#6d7d91;line-height:1.8;margin:22px 0 28px;max-width:580px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap}
-.btn{
-display:inline-block;padding:14px 20px;border-radius:12px;
-font-weight:bold;font-size:14px
-}
-.primary{background:#087cff;color:white;box-shadow:0 12px 25px #087cff33}
-.secondary{background:white;color:#071a33;border:1px solid #dce8f3}
-
-/* DASHBOARD */
-.dashboard{
-background:white;border:1px solid #dce9f4;border-radius:25px;
-padding:22px;box-shadow:0 20px 60px #173b5d1c
-}
-.dtop{display:flex;justify-content:space-between;margin-bottom:16px}
-.dtitle{font-size:12px;font-weight:bold;color:#728
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial;color:#17324d;background:#f5faff}a{text-decoration:none}.wrap{max-width:1100px;width:92%;margin:auto}
+nav{height:65px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 5%;position:fixed;top:0;width:100%;z-index:5;box-shadow:0 2px 15px #0001}.logo{font-size:20px;font-weight:900;color:#071a33}.logo b{color:#087cff}.links a{margin-left:22px;color:#536b82;font-weight:bold;font-size:13px}
+.hero{padding:140px 0 80px;background:linear-gradient(135deg,#fff,#e9f6ff)}.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.badge{color:#087cff;background:#e3f4ff;padding:9px 14px;border-radius:30px;display:inline-block;font-size:11px;font-weight:bold;margin-bottom:18px}h1{font-size:56px;line-height:1;color:#071a33}h1 span{color:#087cff}.hero p{color:#718296;line-height:1.8;margin:22px 0}.btn{display:inline-block;padding:14px 20px;border-radius:12px;font-weight:bold;margin:4px}.blue{background:#087cff;color:#fff}.white{background:#fff;color:#071a33;border:1px solid #dce8f3}
+.dash{background:#fff;padding:22px;border-radius:25px;box-shadow:0 20px 50px #173b5d22;border:1px solid #dce9f4}.main{background:linear-gradient(135deg,#071a33,#0962a9);color:#fff;padding:28px;border-radius:20px}.main small{opacity:.7}.main h2{margin:12px 0 25px}.bar{height:8px;background:#ffffff33;border-radius:10px}.fill{width:76%;height:100%;background:#19cfff;border-radius:10px}.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.mini div{text-align:center;padding:18px 5px;border:1px solid #e1ebf4;border-radius:15px}.mini b{display:block;font-size:20px;color:#071a33}
+section{padding:80px 0}.title{text-align:center;margin-bottom:40px}.title small{color:#087cff;font-weight:bold;letter-spacing:2px}.title h2{font-size:38px;color:#071a33;margin:10px}.title p{color:#718296}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.box{background:#fff;padding:25px;border-radius:20px;border:1px solid #dfebf5}.icon{font-size:28px;margin-bottom:15px}.box h3{color:#071a33;margin-bottom:9px}.box p{font-size:13px;color:#718296;line-height:1.6}
+.courses{background:#eef6fc}.course{overflow:hidden;background:#fff;border-radius:20px;border:1px solid #dfebf5}.top{background:linear-gradient(135deg,#071a33,#0863a8);color:#fff;padding:25px}.top small{background:#ffffff22;padding:6px;border-radius:20px}.course .inside{padding:22px}.inside p{color:#718296;font-size:13px;line-height:1.6}.course a{display:block;text-align:center;background:#e8f5ff;color:#087cff;padding:12px;margin-top:18px;border-radius:10px;font-weight:bold;font-size:13px}
+.bot{background:linear-gradient(135deg,#06172d,#0861a5);color:#fff;border-radius:28px;padding:45px;display:flex;align-items:center;justify-content:space-between;gap:25px}.bot h2{font-size:35px;margin:10px 0}.bot p{color:#c0d3e5;line-height:1.6}.bot a{background:#fff;color:#071a33;padding:15px 20px;border-radius:12px;font-weight:bold;white-space:nowrap}
+footer{background:#061629;color:#fff;padding:35px 0;text-align:center}footer p{color:#8399ae;font-size:12px;margin-top:8px}
+@media(max-width:700px){.links{display:none}.hero .wrap{grid-template-columns:1fr}.hero{padding-top:110px}h1{font-size:43px}.grid{grid-template-columns:1fr}.bot{display:block;padding:30px}.bot a{display:inline-block;margin-top:22px}.mini div{padding:13px 3px}}
+</style>
+</head>
+<body>
+<nav><div class="logo">⚕ MEDICOS-<b>ACCESS</b></div><div class="links"><a href="#home">Home</a><a href="#study">Study</a><a href="#courses">Courses</a><a href="#bot">Bot</a></div></nav>
+<section class="hero" id="home"><div class="wrap"><div><span class="badge">● MEDICAL LEARNING PLATFORM</span><h1>Study Smarter.<br>Become <span>Better.</span></h1><p>A modern learning platform for medical and healthcare students. Study material, exam preparation, practice resources and your study bot — all in one place.</p><a class="btn blue" href="#courses">Explore Courses →</a><a class="btn white" href="https://t.me/Medicos_Accessbot" target="_blank">🤖 Study Bot</a></div><div class="dash"><div class="main"><small>YOUR LEARNING JOURNEY</small><h2>Keep Moving Forward 🚀</h2><small>Overall Progress 76%</small><div class="bar"><div class="fill"></div></div></div><div class="mini"><div>📚<b>24+</b><small>Resources</small></div><div>📝<b>10+</b><small>Tests</small></div><div>🎯<b>∞</b><small>Practice</small></div></div></div></div></section>
+<section id="study"><div class="wrap"><div class="title"><small>EVERYTHING YOU NEED</small><h2>One Platform. Multiple Possibilities.</h2><p>Simple, organized and student-focused learning.</p></div><div class="grid"><div class="box"><div class="icon">📚</div><h3>Study Material</h3><p>Notes, PDFs and learning resources for faster revision.</p></div><div class="box"><div class="icon">🎯</div><h3>Exam Preparation</h3><p>Focused resources to help you prepare with confidence.</p></div><div class="box"><div class="icon">📝</div><h3>Practice Tests</h3><p>Practice regularly and improve your weak areas.</p></div><div class="box"><div class="icon">🤖</div><h3>Study Bot</h3><p>Access your study resources directly through Telegram.</p></div><div class="box"><div class="icon">⚡</div><h3>Fast Access</h3><p>Clean mobile-friendly learning experience.</p></div><div class="box"><div class="icon">🔐</div><h3>Student Dashboard</h3><p>Future-ready space for courses and progress.</p></div></div></div></section>
+<section class="courses" id="courses"><div class="wrap"><div class="title"><small>PREMIUM LEARNING</small><h2>Level Up Your Preparation</h2></div><div class="grid"><div class="course"><div class="top"><small>PREMIUM</small><h3>Medical Preparation</h3></div><div class="inside"><p>Structured study resources for serious medical learners.</p><a href="https://t.me/Medicos_Accessbot" target="_blank">Join via Study Bot →</a></div></div><div class="course"><div class="top"><small>COMING SOON</small><h3>Exam Mastery</h3></div><div class="inside"><p>Exam-focused preparation with practice and revision support.</p><a href="#bot">Get Updates →</a></div></div><div class="course"><div class="top"><small>COMING SOON</small><h3>Ultimate Revision</h3></div><div class="inside"><p>A future premium revision experience for efficient learning.</p><a href="#bot">Get Updates →</a></div></div></div></div></section>
+<section id="bot"><div class="wrap"><div class="bot"><div><small style="color:#4bdcff">YOUR STUDY ASSISTANT</small><h2>Meet Your Study Bot 🤖</h2><p>Access your learning ecosystem directly through Telegram.</p></div><a href="https://t.me/Medicos_Accessbot" target="_blank">Open @Medicos_Accessbot →</a></div></div></section>
+<section><div class="wrap title"><small>START YOUR JOURNEY</small><h2>Your Future Starts With What You Learn Today.</h2><p>Build a smarter approach to medical preparation.</p><a class="btn blue" href="https://t.me/Medicos_Accessbot" target="_blank">Start Learning →</a></div></section>
+<footer><b>MEDICOS-ACCESS</b><p>Modern medical learning platform.</p><p>© 2026 MEDICOS-ACCESS. All Rights Reserved.</p></footer>
+</body>
+</html>
